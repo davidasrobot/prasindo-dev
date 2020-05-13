@@ -1,0 +1,472 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+@import "@fortawesome/fontawesome-free/scss/fontawesome.scss";
+@import "@fortawesome/fontawesome-free/scss/regular.scss";
+@import "@fortawesome/fontawesome-free/scss/solid.scss";
+@import "@fortawesome/fontawesome-free/scss/brands.scss";
+
+
+@import url('https://fonts.googleapis.com/css?family=Barlow:400,600,800|Playfair+Display:700,700i|Rubik:400,700|Source+Sans+Pro&display=swap');
+
+$barlow: 'Barlow', sans-serif;
+$playfair: 'Playfair Display', serif;
+$rubik: 'Rubik', sans-serif;
+$source-sans-pro: 'Source Sans Pro', sans-serif;
+h1,.h1{
+    font-family: $playfair;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 85px;
+}
+h3,.h3{
+    font-family: $playfair;
+    font-size: 34px;
+    font-style: italic;
+    font-weight: bold;
+    line-height: 41px;
+}
+h4,.h4{
+    font-family: $playfair;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 36px;
+}
+h5,.h5{
+    font-family: $rubik;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 21px;
+    letter-spacing: 0.0125em;
+    text-transform: uppercase;
+}
+h6,.h6{
+    font-family: $source-sans-pro;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    /* identical to box height */
+
+    letter-spacing: 0.0125em;
+    text-transform: uppercase;
+
+}
+.text-primary{
+    color: $blue;
+}
+p{
+    font-family: $source-sans-pro;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 26px;
+}
+body{
+    font-family: $source-sans-pro;
+    font-size: 13px;
+}
+.list{
+    li{
+        font-family: $source-sans-pro;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 26px;
+    }
+}
+.specs{
+    h5,.h5{
+        font-family: $playfair;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 16px;
+        letter-spacing: 3px;
+    }
+    h6,.h6{
+        font-family: $rubik;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 11px;
+        line-height: 13px;
+        align-items: center;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+    
+    }
+}
+.tour-includes{
+    h5,.h5{
+        font-family: $rubik;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 26px;
+        text-transform: none !important;
+    }
+}
+.barlow{
+    & .prev, .next{
+        position: absolute;
+        top: 115%;
+        z-index: 99;
+        opacity: .5;
+        & i{
+            color: #000;
+            font-size: 12px;
+            width: 24px;
+            height: 24px;
+            padding-top: .4rem;
+            padding-left: .2rem;
+            border-radius: 50%;
+            background-color: fff;
+        }
+        & i:hover {
+            color: black;
+            background-color: white;
+        }
+    }
+    & .slick-slide{
+        height: auto;
+    }
+    & .next{
+        right: 7rem;
+    }
+    & .prev{
+        right: 9rem;
+    }
+    & .next:hover, .prev:hover{
+        opacity: 1;
+    }
+    & .card-caption{
+        bottom: 15px;
+        left: 20px;
+        z-index: 99;
+    }
+    & .card-image-hover:hover{
+        filter: brightness(50%);
+    }
+    h1,.h1{
+        font-family: $barlow;
+        font-style: normal;
+        font-weight: 800;
+        font-size: 64px;
+        line-height: 77px;
+        letter-spacing: 0.1em;
+    }
+    h2,.h2{
+        font-family: $barlow;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 36px;
+        line-height: 43px;
+        color: #04AFD5;
+    }
+    p{
+        font-family: $barlow;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 22px;
+        letter-spacing: 0.1em;
+    }
+    .opacity-50{
+        opacity: .5;
+    }
+    .interest-image-title{
+        right: 2rem;
+        bottom: 1rem;
+    }
+    .slider-nav-container{
+        margin-top: -25rem;
+    }
+}
+.form{
+    h4,.h4{
+        font-family: $rubik;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 22px;
+        line-height: 28px;
+    }
+}
+.px-10{
+    padding-left: 5rem;
+    padding-right: 5rem;
+}
+.text-orange{
+    color: #F2994A;
+}
+.btn-primary{
+    background-color: $blue;
+}
+.text-primary{
+    color:$blue;
+}
+.bg-dark{
+    background-color: #232323 !important;
+}
+.text-header{
+    white-space: pre-line;
+    color: white;
+    margin-left: 10rem;
+    top: 50%;
+}
+.py-7{
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+.py-10{
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+}
+.pt-7{
+    padding-top: 5rem;
+}
+.pb-7{
+    padding-bottom: 5rem;
+}
+.pt-10{
+    padding-top: 10rem;
+}
+.pb-10{
+    padding-bottom: 10rem;
+}
+.single-item{
+    & .slick-slide{
+        height: auto;
+    }
+    & .prev, .next{
+        position: absolute;
+        top: 50%;
+        z-index: 99;
+        & i{
+            color: #fff;
+            font-size: 12px;
+            width: 32px;
+            height: 32px;
+            padding: .65rem;
+            border-radius: 50%;
+            background-color: $blue;
+        }
+        & i:hover {
+            color: white;
+            background-color: $blue;
+        }
+    }
+    & .next{
+        right: -60px;
+    }
+    & .prev{
+        left: -60px;
+    }
+}
+.golf-detail-include{
+    & .slick-slide{
+        height: auto;
+    }
+    & .prev, .next{
+        position: absolute;
+        bottom: 1rem;
+        z-index: 99;
+        opacity: .5;
+        & i{
+            color: #000;
+            font-size: 12px;
+            width: 32px;
+            height: 32px;
+            padding: .65rem;
+            border-radius: 50%;
+            background-color: #fff;
+        }
+        & i:hover {
+            color: #000;
+        }
+    }
+    & .prev:hover, .next:hover{
+        opacity: 1;
+    }
+    & .next{
+        right: 0px;
+    }
+    & .prev{
+        right: 2.5rem;
+    }
+    li{
+        font-family: $rubik;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 21px;
+    }
+}
+.card-item-slider{
+    & .prev, .next{
+        position: absolute;
+        top: 35%;
+        z-index: 99;
+        & i{
+            color: white;
+            font-size: 12px;
+            width: 24px;
+            height: 24px;
+            padding: .4rem .6rem;
+            border-radius: 50%;
+            background-color: black;
+        }
+        & i:hover {
+            color: white;
+            background-color: $blue;
+        }
+    }
+    & .slick-disabled{
+        opacity: 0;
+        display: none;
+    }
+    & .slick-slide{
+        height: auto;
+    }
+    & .next{
+        right: -50px;
+    }
+    & .prev{
+        left: -50px;
+    }
+    & .card-caption{
+        bottom: 15px;
+        left: 20px;
+        z-index: 99;
+    }
+    & .card-image-hover:hover{
+        filter: brightness(50%);
+    }
+    & #other-car{
+        & .card-caption{
+            bottom: 100px;
+            left: 20px;
+            width: 250px;
+            z-index: 99;
+        }
+        & .prev, .next{
+            position: absolute;
+            top: 35%;
+            z-index: 99;
+            & i{
+                color: #fff;
+                font-size: 12px;
+                width: 32px;
+                height: 32px;
+                padding: .65rem;
+                border-radius: 50%;
+                background-color: $blue;
+            }
+            & i:hover {
+                color: white;
+                background-color: $blue;
+            }
+        }
+        & .next{
+            right: -60px;
+        }
+        & .prev{
+            left: -60px;
+        }
+    }
+}
+.tour-slider{
+    & .prev, .next{
+        position: absolute;
+        top: 85%;
+        z-index: 99;
+        & i{
+            color: #000;
+            font-size: 12px;
+            width: 24px;
+            height: 24px;
+            padding-top: .4rem;
+            padding-left: .2rem;
+            border-radius: 50%;
+            background-color: white;
+        }
+        & i:hover {
+            color: white;
+            background-color: $blue;
+        }
+    }
+    & .slick-disabled{
+        opacity: 0.5;
+    }
+    & .slick-slide{
+        height: auto;
+    }
+    & .next{
+        right: 40px;
+    }
+    & .prev{
+        right: 80px;
+    }
+    & .card-caption{
+        bottom: 15px;
+        left: 20px;
+        z-index: 99;
+    }
+    & .card-image-hover:hover{
+        filter: brightness(50%);
+    }
+}
+button {
+    outline: none;
+}
+.btn:focus, .btn.focus{
+    box-shadow: none;
+}
+.rounded-lg{
+    border-radius: 2rem !important;
+}
+#navbar{
+    & .nav-link{
+        font-family: $source-sans-pro;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 13px;
+        line-height: 18px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: $black;
+    }
+}
+.text-small{
+    font-size: 12px;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.0125em;
+}
+:focus{
+    outline: none !important;
+}
+.pre-line{
+    white-space: pre-line;
+}
+.card-absolute-right{
+    position: absolute;
+    z-index: 1;
+    right: 190px;
+    margin-top: 5rem;
+}
+.card-absolute-left{
+    position: absolute;
+    z-index: 1;
+    left: 190px;
+    margin-top: 5rem;
+}
