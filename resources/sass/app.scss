@@ -537,7 +537,13 @@ button {
     left: 190px;
     margin-top: 5rem;
 }
+#open-nav{
+    display: none;
+}
 @media screen and (max-width:768px){
+    #open-nav{
+        display: block;
+    }
     .brand{
         width: 100px;
     }
