@@ -16,12 +16,15 @@ class CarRentController extends Controller
     {
         $model = new CarRent();
         $minibuses = $model->where(['category' => 1, 'available' => 1])->get();
-        $minivan = $model->where('category', 2)->get();
-        $luxury = $model->where('category', 3)->get();
-        $bus = $model->where('category', 4)->get();
+        $minivans = $model->where(['category' => 2, 'available' => 1])->get();
+        $luxuries = $model->where(['category' => 3, 'available' => 1])->get();
+        $buses = $model->where(['category' => 4, 'available' => 1])->get();
 
         return view('CarRent/index', compact([
-            'minibuses'
+            'minibuses',
+            'minivans',
+            'luxuries',
+            'buses'
         ]));
         // return response()->json($minibus);
     }

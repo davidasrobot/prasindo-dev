@@ -41,19 +41,19 @@
     <div class="card-item-slider py-7">
         <h5 class="py-3">MINIVAN</h5>
         <div class="slick-slider">
-            @for ($i = 0; $i < 8; $i++)
-                <div class="col-3 pl-0">
-                    <div>
-                        <div class="position-absolute text-white card-caption">
-                            <h6 class="text-uppercase">Toyota</h6>
-                            <h6 class="text-uppercase text-small">Avanza</h6>
-                        </div>
-                        <a href="#">
-                            <img class="card-image-hover w-100" src="https://picsum.photos/200/200" alt="lorem picture">
-                        </a>
+            @foreach ($minivans as $vans)
+            <div class="col-3 pl-0">
+                <div>
+                    <div class="position-absolute text-white card-caption">
+                        <h6 class="text-uppercase">{{$vans->name}}</h6>
+                        <h6 class="text-uppercase text-small">{{$vans->merk}}</h6>
                     </div>
+                    <a href="/car-rent/{{$vans->id}}">
+                        <img class="card-image-hover w-100" src="{{ Voyager::image( str_replace('.png', '-thumbnail.png', $vans->thumbnail->image) ) }}" alt="{{$vans->thumbnail->name}}">
+                    </a>
                 </div>
-            @endfor
+            </div>
+            @endforeach
         </div>
     </div>
 
@@ -70,38 +70,38 @@
     <div class="card-item-slider py-7">
         <h5 class="py-3">LUXURY CAR</h5>
         <div class="slick-slider">
-            @for ($i = 0; $i < 8; $i++)
-                <div class="col-3 pl-0">
-                    <div>
-                        <div class="position-absolute text-white card-caption">
-                            <h6 class="text-uppercase">Toyota</h6>
-                            <h6 class="text-uppercase text-small">Avanza</h6>
-                        </div>
-                        <a href="#">
-                            <img class="card-image-hover w-100" src="https://picsum.photos/200/200" alt="lorem picture">
-                        </a>
+            @foreach ($luxuries as $lux)
+            <div class="col-3 pl-0">
+                <div>
+                    <div class="position-absolute text-white card-caption">
+                        <h6 class="text-uppercase">{{$lux->name}}</h6>
+                        <h6 class="text-uppercase text-small">{{$lux->merk}}</h6>
                     </div>
+                    <a href="/car-rent/{{$lux->id}}">
+                        <img class="card-image-hover w-100" src="{{ Voyager::image( str_replace('.png', '-thumbnail.png', $lux->thumbnail->image) ) }}" alt="{{$lux->thumbnail->name}}">
+                    </a>
                 </div>
-            @endfor
+            </div>
+            @endforeach
         </div>
     </div>
 
     <div class="card-item-slider py-7">
         <h5 class="py-3">BUS</h5>
         <div class="slick-slider">
-            @for ($i = 0; $i < 8; $i++)
-                <div class="col-3 pl-0">
-                    <div>
-                        <div class="position-absolute text-white card-caption">
-                            <h6 class="text-uppercase">Toyota</h6>
-                            <h6 class="text-uppercase text-small">Avanza</h6>
-                        </div>
-                        <a href="#">
-                            <img class="card-image-hover w-100" src="https://picsum.photos/200/200" alt="lorem picture">
-                        </a>
+            @foreach ($buses as $bus)
+            <div class="col-3 pl-0">
+                <div>
+                    <div class="position-absolute text-white card-caption">
+                        <h6 class="text-uppercase">{{$bus->name}}</h6>
+                        <h6 class="text-uppercase text-small">{{$bus->merk}}</h6>
                     </div>
+                    <a href="/car-rent/{{$bus->id}}">
+                        <img class="card-image-hover w-100" src="{{ Voyager::image( str_replace('.png', '-thumbnail.png', $bus->thumbnail->image) ) }}" alt="{{$bus->thumbnail->name}}">
+                    </a>
                 </div>
-            @endfor
+            </div>
+            @endforeach
         </div>
     </div>
 @endsection
@@ -124,21 +124,25 @@
                     slidesToShow: 4,
                     slidesToScroll: 1,
                     infinite: true,
-                    dots: true
+                    dots: false,
                 }
                 },
                 {
                 breakpoint: 600,
                 settings: {
                     slidesToShow: 4,
-                    slidesToScroll: 1
+                    slidesToScroll: 1,
+                    dots: true,
+                    arrows:false,
                 }
                 },
                 {
                 breakpoint: 480,
                 settings: {
                     slidesToShow: 1,
-                    slidesToScroll: 1
+                    slidesToScroll: 1,
+                    dots: true,
+                    arrows:false,
                 }
                 }
                 // You can unslick at a given breakpoint now by adding:

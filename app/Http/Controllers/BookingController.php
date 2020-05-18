@@ -64,7 +64,7 @@ class BookingController extends Controller
             return back()->with(['error' => $validator->errors()->first()]);
         }
 
-        $dueDate = now()+15;
+        $dueDate = now()->add(15, 'days');
         $package = GolfPackage::findOrFail($request->golf_package_id);
         $total = $package->price * $request->pax;
         $dp = $total * 0.2;
@@ -134,7 +134,7 @@ class BookingController extends Controller
             'days' => $days,
             'notes' => $request->notes
         ]);
-        Mail::to('tester@test.com')->send(new EmailConfirmation($createBooking->id));
+        Mail::to($request->email)->send(new EmailConfirmation($createBooking->id));
         return redirect('/booking/success');
     }
 

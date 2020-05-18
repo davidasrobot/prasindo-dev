@@ -26,7 +26,7 @@
                     $explode = explode('; ', $travels->itinerary)
                 @endphp
                 @foreach ($explode as $e)
-                    <div class="col-4">
+                    <div class="col-md-4">
                         <li>{{$e}}</li>
                     </div>
                 @endforeach
@@ -48,13 +48,13 @@
         <div class="container-fluid py-7">
             <div class="row">
                 @if ($i % 2 == 0)
-                    <div class="col-6 tour-slider pr-0 order-last">
+                    <div class="col-md-6 tour-slider pr-0 order-md-1">
                 @else
-                    <div class="col-6 tour-slider pl-0">
+                    <div class="col-md-6 tour-slider pl-0 order-md-3">
                 @endif
                     <img class="w-100" src="{{Voyager::image( $d->image )}}" alt="{{$d->day}}-travel-prasindo">
                 </div>
-                <div class="col-6 py-5 pr-0 pl-5">
+                <div class="col-md-6 py-5 pr-0 pl-md-5 order-md-2">
                     <div class="w-75 mx-auto">
                         <h1 class="h1 font-italic mb-5">{{$d->day}}</h1>
                         <ul class="pl-3 list">
@@ -80,7 +80,7 @@
             <h3 class="h3 text-center">Tour Includes</h3>
             <div class="row tour-includes">
                 @foreach ($travels->include as $include)
-                    <div class="col-4 mb-5">
+                    <div class="col-6 col-md-4 mb-5">
                         <img class="w-100" src="{{Voyager::image( $include->image )}}" alt="{{$include->description}}-travel-prasindo">
                         <div class="text-center">
                             <h5 class="h5 mt-3">{{$include->description}}</h5>
@@ -96,22 +96,22 @@
             <p class="w-75 mx-auto py-3">Ea voluptate pariatur sit laborum mollit veniam voluptate velit velit elit. Esse ut sit aute commodo voluptate. Duis qui deserunt sit est reprehenderit eu ut occaecat. Proident eiusmod cupidatat voluptate deserunt commodo ipsum cillum duis.</p>
             <div class="py-5 w-50 mx-auto">
                 <div class="row list">
-                    <div class="col-6 py-2">
+                    <div class="col-md-6 py-2">
                         <li class="pl-3">Flight Tickets</li>
                     </div>
-                    <div class="col-6 py-2">
+                    <div class="col-md-6 py-2">
                         <li class="pl-3">Lunch & Dinner</li>
                     </div>
-                    <div class="col-6 py-2">
+                    <div class="col-md-6 py-2">
                         <li class="pl-3">Caddy Tips</li>
                     </div>
-                    <div class="col-6 py-2">
+                    <div class="col-md-6 py-2">
                         <li class="pl-3">Personal Expenses</li>
                     </div>
-                    <div class="col-6 py-2">
+                    <div class="col-md-6 py-2">
                         <li class="pl-3">Travel Insurance</li>
                     </div>
-                    <div class="col-6 py-2">
+                    <div class="col-md-6 py-2">
                         <li class="pl-3">Personal Guide & Driver Tips</li>
                     </div>
                 </div>
@@ -121,8 +121,8 @@
 
     <div class="container-fluid barlow py-10">
         <div class="row">
-            <div class="col-6">
-                <div class="w-50 mx-auto">
+            <div class="col-md-6">
+                <div class="w-md-50 mx-auto">
                     <h2 class="h2">Interest?</h2>
                     <h1 class="h1 my-5">LET SEE
                         WHAT YOU
@@ -131,7 +131,7 @@
                         can get</p>
                 </div>
             </div>
-            <div class="col-6">
+            <div class="col-md-6">
                 <div class="slider-for">
                     @for ($i = 1; $i < $total=6; $i++)
                         <div>
@@ -149,11 +149,11 @@
                 </div>
             </div>
             <div class="container-fluid slider-nav-container">
-                <div class="w-75">
+                <div class="w-md-75">
                     <div class="slider-nav">
                         @for ($i = 1; $i < 6; $i++)
                             <div>
-                                <img width="300" height="300" src="{{asset('images/interest-nav.png')}}" alt="interest">
+                                <img class="img-fluid p-1" src="{{asset('images/interest-nav.png')}}" alt="interest">
                             </div>
                         @endfor
                     </div>

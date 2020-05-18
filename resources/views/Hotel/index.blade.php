@@ -40,19 +40,19 @@
     <div class="card-item-slider py-7">
         <h5 class="py-3 text-uppercase">INTERNATIONAL</h5>
         <div class="slick-slider">
-            @for ($i = 0; $i < 8; $i++)
-                <div class="col-3 pl-0">
-                    <div>
-                        <div class="position-absolute text-white card-caption">
-                            <h6 class="text-uppercase">Toyota</h6>
-                            <h6 class="text-uppercase text-small">Avanza</h6>
-                        </div>
-                        <a href="#">
-                            <img class="card-image-hover w-100" src="https://picsum.photos/200/200" alt="lorem picture">
-                        </a>
+            @foreach ($internationals as $inter)
+            <div class="col-3 pl-0">
+                <div>
+                    <div class="position-absolute text-white card-caption">
+                        <h6 class="text-uppercase">{{$inter->name}}</h6>
+                        <h6 class="text-uppercase text-small">{{$inter->location}}</h6>
                     </div>
+                    <a href="/hotel/{{$inter->id}}">
+                        <img class="card-image-hover w-100" src="{{ Voyager::image( str_replace('.png', '-thumbnail.png', $inter->ImageThumbnail->image) ) }}" alt="{{$inter->ImageThumbnail->name}}">
+                    </a>
                 </div>
-            @endfor
+            </div>
+            @endforeach
         </div>
     </div>
     
@@ -76,21 +76,25 @@
                     slidesToShow: 4,
                     slidesToScroll: 1,
                     infinite: true,
-                    dots: true
+                    dots: false,
                 }
                 },
                 {
                 breakpoint: 600,
                 settings: {
                     slidesToShow: 4,
-                    slidesToScroll: 1
+                    slidesToScroll: 1,
+                    dots: true,
+                    arrows:false,
                 }
                 },
                 {
                 breakpoint: 480,
                 settings: {
                     slidesToShow: 1,
-                    slidesToScroll: 1
+                    slidesToScroll: 1,
+                    dots: true,
+                    arrows:false,
                 }
                 }
                 // You can unslick at a given breakpoint now by adding:

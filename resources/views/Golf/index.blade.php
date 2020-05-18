@@ -24,13 +24,13 @@
     @foreach ($recomends as $r)
     <div class="py-10">
         <div class="row">
-            <div class="col-8">
+            <div class="col-12 col-md-8 order-2">
                 <img class="w-100" src="{{Voyager::image( $r->banner_image )}}" alt="{{$r->name}}">
             </div>
             @if ($i % 2 == 0)
-                <div class="col-4 py-10 order-first">
+                <div class="col-12 col-md-4 py-10 order-md-1">
             @else
-                <div class="col-4 py-10">
+                <div class="col-12 col-md-4 py-10 order-md-3">
             @endif
                 <h6 class="h6 text-primary">{{$r->city}}, {{$r->location}}</h6>
                 <h4 class="h4">{{$r->name}}</h4>
@@ -83,24 +83,29 @@
                 {
                 breakpoint: 1024,
                 settings: {
+                    arrows:false,
                     slidesToShow: 3,
                     slidesToScroll: 1,
                     infinite: true,
-                    dots: true
+                    dots: false
                 }
                 },
                 {
                 breakpoint: 600,
                 settings: {
-                    slidesToShow: 3,
-                    slidesToScroll: 1
+                    arrows:false,
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    dots: true
                 }
                 },
                 {
                 breakpoint: 480,
                 settings: {
+                    arrows:false,
                     slidesToShow: 1,
-                    slidesToScroll: 1
+                    slidesToScroll: 1,
+                    dots: true
                 }
                 }
                 // You can unslick at a given breakpoint now by adding:

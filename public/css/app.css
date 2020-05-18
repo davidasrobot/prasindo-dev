@@ -17041,6 +17041,44 @@ body {
   text-transform: uppercase;
 }
 
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 25px;
+  margin-left: 50px;
+}
+
+.sidenav-open {
+  width: 100%;
+}
+
 .tour-includes h5,
 .tour-includes .h5 {
   font-family: "Rubik", sans-serif;
@@ -17147,6 +17185,12 @@ body {
   margin-top: -25rem;
 }
 
+@media screen and (max-width: 768px) {
+  .barlow .slider-nav-container {
+    margin-top: 0px;
+  }
+}
+
 .form h4,
 .form .h4 {
   font-family: "Rubik", sans-serif;
@@ -17159,6 +17203,13 @@ body {
 .px-10 {
   padding-left: 5rem;
   padding-right: 5rem;
+}
+
+@media screen and (max-width: 768px) {
+  .px-10 {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
 }
 
 .text-orange {
@@ -17208,6 +17259,36 @@ body {
 
 .pb-10 {
   padding-bottom: 10rem;
+}
+
+.pl-md-5 {
+  padding-left: 2.5rem;
+}
+
+@media screen and (max-width: 768px) {
+  .pl-md-5 {
+    padding-left: 0rem;
+  }
+}
+
+.w-md-50 {
+  width: 50%;
+}
+
+@media screen and (max-width: 768px) {
+  .w-md-50 {
+    width: 100%;
+  }
+}
+
+.w-md-75 {
+  width: 75%;
+}
+
+@media screen and (max-width: 768px) {
+  .w-md-75 {
+    width: 100%;
+  }
 }
 
 .single-item .slick-slide {
@@ -17438,6 +17519,14 @@ body {
           filter: brightness(50%);
 }
 
+@media screen and (max-width: 768px) {
+  .hero h1,
+  .hero .h1 {
+    font-size: 24px !important;
+    line-height: 30px !important;
+  }
+}
+
 button {
   outline: none;
 }
@@ -17489,5 +17578,58 @@ button {
   z-index: 1;
   left: 190px;
   margin-top: 5rem;
+}
+
+@media screen and (max-width: 768px) {
+  .brand {
+    width: 100px;
+  }
+
+  .md-hidden {
+    display: none;
+  }
+
+  .py-10 {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+
+  .py-7 {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+  }
+
+  .navbar-brand {
+    margin: 0px auto;
+  }
+
+  h1,
+  .h1 {
+    font-size: 40px;
+    line-height: 50px;
+  }
+
+  .text-header {
+    margin-left: 2rem;
+    top: 6rem;
+  }
+
+  .card-absolute-right,
+  .card-absolute-left {
+    position: relative;
+    right: 0;
+    left: 0;
+    margin-top: 0rem;
+  }
+
+  .display-3 {
+    font-size: 3.5rem;
+  }
+}
+
+@media print {
+  #print {
+    display: none;
+  }
 }
 

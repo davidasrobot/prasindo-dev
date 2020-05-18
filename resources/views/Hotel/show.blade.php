@@ -21,29 +21,38 @@
 @endsection
 @section('content')
 
-    @for ($i = 0; $i < $count=2; $i++)
-    <div class="row py-10">
-        @if ($i % 2 == 0)
-        <div class="col-4 py-5 order-last">
-        @else
-        <div class="col-4 py-5">
-        @endif
-            <h4 class="h4">Package 1</h4>
-            <h6 class="text-small">Weekday, 3 Days 2 Night</h6>
-            <h5 class="h5 text-orange">IDR 5.456.196 / Person</h5>
-            <p class="py-3">Enjoy three days in vibrant Bogor and play golf at some of the best Indonesian courses.</p>
-            <ul class="pl-3">
-                @for ($ii = 0; $ii < 3; $ii++)
-                    <li class="mb-2">Luxury accommodation</li>
-                @endfor
-            </ul>
-            <button class="btn btn-outline-primary px-5 text-uppercase rounded-0 font-weight-bold">view more</button>
+    @php
+        $i=0
+    @endphp
+    @foreach ($hotels->package as $item)
+        <div class="row py-10">
+            @if ($i % 2 == 0)
+            <div class="col col-md-4 py-5 order-last">
+            @else
+            <div class="col col-md-4 py-5">
+            @endif
+                <h4 class="h4">{{$item->name}}</h4>
+                <h6 class="text-small">Weekday, {{$item->day}} Days {{$item->night}} Night</h6>
+                <h5 class="h5 text-orange">IDR {{number_format($item->price, 2)}} / Person</h5>
+                <p class="py-3">{{$item->description}}</p>
+                <ul class="pl-3">
+                    @php
+                            $explode_list = explode('; ', $item->Golf->itinerary);
+                        @endphp
+                        @foreach ($explode_list as $el)
+                            <li class="mb-2">{{$el}}</li>
+                        @endforeach
+                </ul>
+                <a href="/golf/{{$item->Golf->id}}" class="btn btn-outline-primary px-5 text-uppercase rounded-0 font-weight-bold">view more</a>
+            </div>
+            <div class="col-md-8">
+                <img class="img-fluid" src="{{Voyager::image($item->image)}}" alt="{{$item->name}}">
+            </div>
         </div>
-        <div class="col-8">
-            <img src="{{asset('images/package-1.png')}}" alt="package-1">
-        </div>
-    </div>
-    @endfor
+        @php
+            $i++
+        @endphp
+    @endforeach
 
     <div class="card-item-slider py-7">
         <h5 class="py-3 text-center">OTHER HOTEL</h5>
@@ -93,21 +102,25 @@
                     slidesToShow: 3,
                     slidesToScroll: 1,
                     infinite: true,
-                    dots: true
+                    dots: false,
                 }
                 },
                 {
                 breakpoint: 600,
                 settings: {
                     slidesToShow: 3,
-                    slidesToScroll: 1
+                    slidesToScroll: 1,
+                    dots:false,
+                    arrows:false,
                 }
                 },
                 {
                 breakpoint: 480,
                 settings: {
                     slidesToShow: 1,
-                    slidesToScroll: 1
+                    slidesToScroll: 1,
+                    dots:false,
+                    arrows:false,
                 }
                 }
                 // You can unslick at a given breakpoint now by adding:

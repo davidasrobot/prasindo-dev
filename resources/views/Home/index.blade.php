@@ -6,7 +6,7 @@
 
 @section('header')
     <div class="w-100">
-        <div class="position-absolute text-header">
+        <div class="position-absolute text-header hero">
             <h1 class="h1">Amazing Bogor Raya
                 Golf Experience</h1>
             <button class="btn btn-light rounded-0 text-uppercase font-weight-bold px-5">view more</button>
@@ -100,10 +100,10 @@
     
         {{-- Destination --}}
         <div class="row py-10">
-            <div class="col-8">
-                <img src="{{asset('images/package-2.png')}}" alt="package-2">
+            <div class="col-md-8">
+                <img class="img-fluid" src="{{asset('images/package-2.png')}}" alt="package-2">
             </div>
-            <div class="col-4 py-5">
+            <div class="col-md-4 py-5 order-1">
                 <h4 class="h4">Package 1</h4>
                 <h6 class="text-small">Weekday, 3 Days 2 Night</h6>
                 <h5 class="h5 text-orange">IDR 5.456.196 / Person</h5>
@@ -117,7 +117,7 @@
             </div>
         </div>
         <div class="row py-10">
-            <div class="col-4 py-5">
+            <div class="col-md-4 py-5 order-1">
                 <h4 class="h4">Package 1</h4>
                 <h6 class="text-small">Weekday, 3 Days 2 Night</h6>
                 <h5 class="h5 text-orange">IDR 5.456.196 / Person</h5>
@@ -129,8 +129,8 @@
                 </ul>
                 <button class="btn btn-outline-primary px-5 text-uppercase rounded-0 font-weight-bold">view more</button>
             </div>
-            <div class="col-8">
-                <img src="{{asset('images/package-1.png')}}" alt="package-1">
+            <div class="col-md-8">
+                <img class="img-fluid" src="{{asset('images/package-1.png')}}" alt="package-1">
             </div>
         </div>
     </section>
@@ -172,7 +172,7 @@
     <section>
         <div class="container">
             <div class="py-10">
-                <div class="col-5 card-absolute-right">
+                <div class="col col-lg-5 card-absolute-right order-last">
                     <div class="card card-body rounded-0 border-0">
                         <div>
                             <h4 class="h4">Bali Golf and Tour Package</h4>
@@ -184,12 +184,12 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-9">
-                    <img src="{{asset('images/golf-tour-package.png')}}" alt="golf-tour-package">
+                <div class="col col-lg-9">
+                    <img class="img-fluid" src="{{asset('images/golf-tour-package.png')}}" alt="golf-tour-package">
                 </div>
             </div>
             <div class="py-10">
-                <div class="col-5 card-absolute-left">
+                <div class="col col-lg-5 card-absolute-left order-last">
                     <div class="card card-body rounded-0 border-0">
                         <div>
                             <h4 class="h4">Bali Golf and Tour Package</h4>
@@ -201,8 +201,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-9 ml-auto">
-                    <img src="{{asset('images/golf-tour-package.png')}}" alt="golf-tour-package">
+                <div class="col col-lg-9 ml-auto">
+                    <img class="img-fluid" src="{{asset('images/golf-tour-package.png')}}" alt="golf-tour-package">
                 </div>
             </div>
         </div>
@@ -224,24 +224,29 @@
                 {
                 breakpoint: 1024,
                 settings: {
+                    arrows:false,
                     slidesToShow: 3,
                     slidesToScroll: 1,
                     infinite: true,
-                    dots: true
+                    dots: false
                 }
                 },
                 {
                 breakpoint: 600,
                 settings: {
-                    slidesToShow: 3,
-                    slidesToScroll: 1
+                    arrows:false,
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    dots: true
                 }
                 },
                 {
                 breakpoint: 480,
                 settings: {
+                    arrows:false,
                     slidesToShow: 1,
-                    slidesToScroll: 1
+                    slidesToScroll: 1,
+                    dots: true
                 }
                 }
                 // You can unslick at a given breakpoint now by adding:

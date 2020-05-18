@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="{{ asset('/css/app.css') }}">
+    <script src="{{asset('/js/app.js')}}"></script>
     <title>Invoice {{$bookings->fullname}} - {{$bookings->package}}</title>
 </head>
 <body>
@@ -86,6 +87,7 @@
         <div class="py-5">
             <a href="#" class="h6"><b>Terms And Condition</b></a>
             <p>Payment is due within 15 Days from the time you ordered</p>
+            <button class="btn btn-secondary rounded-0 px-5 font-weight-bold text-uppercase" id="print" onclick="window.print()"><i class="fa fa-print"></i> print</button>
         </div>
     </div>
     <div class="px-10 text-center form py-7">

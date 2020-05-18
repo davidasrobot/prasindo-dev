@@ -14,4 +14,8 @@ class Hotel extends Model
     {
         return $this->hasOne('App\HotelImage', 'hotel_id');
     }
+    public function Package()
+    {
+        return $this->hasMany('App\GolfPackage');
+    }
 }

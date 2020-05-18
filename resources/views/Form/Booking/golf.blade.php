@@ -4,9 +4,9 @@
     Booking - Golf
 @endsection
 @section('content')
-    <div class="px-10 form py-7">
-        <h4 class="h4 text-center">Please Fill The Form Below</h4>
-        <p class="pb-5 text-center">Fill the field with real information for book the package</p>
+    <div class="px-10 text-center form py-7">
+        <h4 class="h4">Please Fill The Form Below</h4>
+        <p class="pb-5">Fill the field with real information for book the package</p>
 
         <div class="px-10">
             <form action="/booking/golf" method="post">

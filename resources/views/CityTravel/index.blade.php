@@ -41,19 +41,19 @@
     <div class="card-item-slider py-7">
         <h5 class="py-3">OUTBOUND</h5>
         <div class="slick-slider">
-            @for ($i = 0; $i < 8; $i++)
+            @foreach ($outbounds as $out)
                 <div class="col-3 pl-0">
                     <div>
                         <div class="position-absolute text-white card-caption">
-                            <h6 class="text-uppercase">jakarta</h6>
-                            <h6 class="text-uppercase text-small">dki jakarta</h6>
+                            <h6 class="text-uppercase">{{$out->city}}</h6>
+                            <h6 class="text-uppercase text-small">{{$out->location}}</h6>
                         </div>
-                        <a href="#">
-                            <img class="card-image-hover w-100" src="https://picsum.photos/200/200" alt="lorem picture">
+                        <a href="/city-travel/{{$out->id}}">
+                            <img class="card-image-hover w-100" src="{{ Voyager::image( str_replace('.png', '-thumbnail.png', $out->banner_image) ) }}" alt="{{$out->city}}-travel">
                         </a>
                     </div>
                 </div>
-            @endfor
+            @endforeach
         </div>
     </div>
 
@@ -124,21 +124,25 @@
                     slidesToShow: 4,
                     slidesToScroll: 1,
                     infinite: true,
-                    dots: true
+                    dots: false,
                 }
                 },
                 {
                 breakpoint: 600,
                 settings: {
                     slidesToShow: 4,
-                    slidesToScroll: 1
+                    slidesToScroll: 1,
+                    dots:true,
+                    arrows:false
                 }
                 },
                 {
                 breakpoint: 480,
                 settings: {
                     slidesToShow: 1,
-                    slidesToScroll: 1
+                    slidesToScroll: 1,
+                    dots:true,
+                    arrows:false
                 }
                 }
                 // You can unslick at a given breakpoint now by adding:
