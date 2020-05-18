@@ -562,10 +562,14 @@ button {
 }
 #open-nav{
     display: none;
+    opacity: 0;
+    visibility: hidden;
 }
 @media screen and (max-width:768px){
     #open-nav{
         display: block;
+        opacity: 1;
+        visibility: visible;
     }
     .brand{
         width: 100px;
