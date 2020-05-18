@@ -16943,9 +16943,14 @@ readers do not read off random characters that represent icons */
   font-weight: 400;
 }
 
+@font-face {
+  font-family: gotham-light;
+  src: url("/public/fonts/Gotham-Light.ttf") url("/public/fonts/Gotham-Light.ttf");
+}
+
 h1,
 .h1 {
-  font-family: "Playfair Display", serif;
+  font-family: "gotham-light", sans-serif;
   font-size: 64px;
   font-style: normal;
   font-weight: 900;
@@ -16954,7 +16959,7 @@ h1,
 
 h3,
 .h3 {
-  font-family: "Playfair Display", serif;
+  font-family: "gotham-light", sans-serif;
   font-size: 34px;
   font-style: italic;
   font-weight: bold;
@@ -16963,7 +16968,7 @@ h3,
 
 h4,
 .h4 {
-  font-family: "Playfair Display", serif;
+  font-family: "gotham-light", sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 22px;
@@ -16972,7 +16977,7 @@ h4,
 
 h5,
 .h5 {
-  font-family: "Rubik", sans-serif;
+  font-family: "gotham-light", sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 18px;
@@ -16983,7 +16988,7 @@ h5,
 
 h6,
 .h6 {
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: "gotham-light", sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
@@ -16998,7 +17003,7 @@ h6,
 }
 
 p {
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: "gotham-light", sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: normal;
@@ -17007,12 +17012,12 @@ p {
 }
 
 body {
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: "gotham-light", sans-serif;
   font-size: 13px;
 }
 
 .list li {
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: "gotham-light", sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
@@ -17021,7 +17026,7 @@ body {
 
 .specs h5,
 .specs .h5 {
-  font-family: "Playfair Display", serif;
+  font-family: "gotham-light", sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 14px;
@@ -17031,7 +17036,7 @@ body {
 
 .specs h6,
 .specs .h6 {
-  font-family: "Rubik", sans-serif;
+  font-family: "gotham-light", sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 11px;
@@ -17081,7 +17086,7 @@ body {
 
 .tour-includes h5,
 .tour-includes .h5 {
-  font-family: "Rubik", sans-serif;
+  font-family: "gotham-light", sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
@@ -17145,7 +17150,7 @@ body {
 
 .barlow h1,
 .barlow .h1 {
-  font-family: "Barlow", sans-serif;
+  font-family: "gotham-light", sans-serif;
   font-style: normal;
   font-weight: 800;
   font-size: 64px;
@@ -17155,7 +17160,7 @@ body {
 
 .barlow h2,
 .barlow .h2 {
-  font-family: "Barlow", sans-serif;
+  font-family: "gotham-light", sans-serif;
   font-style: normal;
   font-weight: 600;
   font-size: 36px;
@@ -17164,7 +17169,7 @@ body {
 }
 
 .barlow p {
-  font-family: "Barlow", sans-serif;
+  font-family: "gotham-light", sans-serif;
   font-style: normal;
   font-weight: 600;
   font-size: 18px;
@@ -17193,7 +17198,7 @@ body {
 
 .form h4,
 .form .h4 {
-  font-family: "Rubik", sans-serif;
+  font-family: "gotham-light", sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 22px;
@@ -17369,7 +17374,7 @@ body {
 }
 
 .golf-detail-include li {
-  font-family: "Rubik", sans-serif;
+  font-family: "gotham-light", sans-serif;
   font-style: normal;
   font-weight: 300;
   font-size: 16px;
@@ -17541,7 +17546,7 @@ button {
 }
 
 #navbar .nav-link {
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: "gotham-light", sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 13px;

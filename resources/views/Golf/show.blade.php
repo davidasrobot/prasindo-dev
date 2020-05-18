@@ -165,7 +165,7 @@
     <div class="container-fluid barlow py-10">
         <div class="row">
             <div class="col-md-6">
-                <div class="w-md-50 mx-auto">
+                <div class="w-md-75 mx-auto">
                     <h2 class="h2">Interest?</h2>
                     <h1 class="h1 my-5">LET SEE
                         WHAT YOU

@@ -15,33 +15,43 @@
 
 @import url('https://fonts.googleapis.com/css?family=Barlow:400,600,800|Playfair+Display:700,700i|Rubik:400,700|Source+Sans+Pro&display=swap');
 
+@font-face{
+    font-family: gotham-light;
+    src: url('/public/fonts/Gotham-Light.ttf') url('/public/fonts/Gotham-Light.ttf');
+}
+
+$gotham: 'gotham-light', sans-serif;
 $barlow: 'Barlow', sans-serif;
 $playfair: 'Playfair Display', serif;
 $rubik: 'Rubik', sans-serif;
 $source-sans-pro: 'Source Sans Pro', sans-serif;
 h1,.h1{
-    font-family: $playfair;
+    // font-family: $playfair;
+    font-family: $gotham;
     font-size: 64px;
     font-style: normal;
     font-weight: 900;
     line-height: 85px;
 }
 h3,.h3{
-    font-family: $playfair;
+    // font-family: $playfair;
+    font-family: $gotham;
     font-size: 34px;
     font-style: italic;
     font-weight: bold;
     line-height: 41px;
 }
 h4,.h4{
-    font-family: $playfair;
+    // font-family: $playfair;
+    font-family: $gotham;
     font-style: normal;
     font-weight: bold;
     font-size: 22px;
     line-height: 36px;
 }
 h5,.h5{
-    font-family: $rubik;
+    // font-family: $rubik;
+    font-family: $gotham;
     font-style: normal;
     font-weight: bold;
     font-size: 18px;
@@ -50,7 +60,8 @@ h5,.h5{
     text-transform: uppercase;
 }
 h6,.h6{
-    font-family: $source-sans-pro;
+    // font-family: $source-sans-pro;
+    font-family: $gotham;
     font-style: normal;
     font-weight: 500;
     font-size: 14px;
@@ -65,7 +76,8 @@ h6,.h6{
     color: $blue;
 }
 p{
-    font-family: $source-sans-pro;
+    // font-family: $source-sans-pro;
+    font-family: $gotham;
     font-size: 16px;
     font-style: normal;
     font-weight: normal;
@@ -73,12 +85,14 @@ p{
     line-height: 26px;
 }
 body{
-    font-family: $source-sans-pro;
+    // font-family: $source-sans-pro;
+    font-family: $gotham;
     font-size: 13px;
 }
 .list{
     li{
-        font-family: $source-sans-pro;
+        // font-family: $source-sans-pro;
+        font-family: $gotham;
         font-style: normal;
         font-weight: normal;
         font-size: 18px;
@@ -87,7 +101,8 @@ body{
 }
 .specs{
     h5,.h5{
-        font-family: $playfair;
+        // font-family: $playfair;
+        font-family: $gotham;
         font-style: normal;
         font-weight: bold;
         font-size: 14px;
@@ -95,7 +110,8 @@ body{
         letter-spacing: 3px;
     }
     h6,.h6{
-        font-family: $rubik;
+        // font-family: $rubik;
+        font-family: $gotham;
         font-style: normal;
         font-weight: 500;
         font-size: 11px;
@@ -142,7 +158,8 @@ body{
 }
 .tour-includes{
     h5,.h5{
-        font-family: $rubik;
+        // font-family: $rubik;
+        font-family: $gotham;
         font-style: normal;
         font-weight: normal;
         font-size: 16px;
@@ -192,7 +209,8 @@ body{
         filter: brightness(50%);
     }
     h1,.h1{
-        font-family: $barlow;
+        // font-family: $barlow;
+        font-family: $gotham;
         font-style: normal;
         font-weight: 800;
         font-size: 64px;
@@ -200,7 +218,8 @@ body{
         letter-spacing: 0.1em;
     }
     h2,.h2{
-        font-family: $barlow;
+        // font-family: $barlow;
+        font-family: $gotham;
         font-style: normal;
         font-weight: 600;
         font-size: 36px;
@@ -208,7 +227,8 @@ body{
         color: #04AFD5;
     }
     p{
-        font-family: $barlow;
+        // font-family: $barlow;
+        font-family: $gotham;
         font-style: normal;
         font-weight: 600;
         font-size: 18px;
@@ -231,7 +251,8 @@ body{
 }
 .form{
     h4,.h4{
-        font-family: $rubik;
+        // font-family: $rubik;
+        font-family: $gotham;
         font-style: normal;
         font-weight: bold;
         font-size: 22px;
@@ -363,7 +384,8 @@ body{
         right: 2.5rem;
     }
     li{
-        font-family: $rubik;
+        // font-family: $rubik;
+        font-family: $gotham;
         font-style: normal;
         font-weight: 300;
         font-size: 16px;
@@ -503,7 +525,8 @@ button {
 }
 #navbar{
     & .nav-link{
-        font-family: $source-sans-pro;
+        // font-family: $source-sans-pro;
+        font-family: $gotham;
         font-style: normal;
         font-weight: bold;
         font-size: 13px;
