@@ -33,7 +33,7 @@ class OrderConfirmation extends Mailable
                    ->view('Mail.order')
                    ->with(
                     [
-                        'link' => 'https://prasindotravel.com/booking/confirm/',
+                        'link' => 'https://prasindotravel.com/booking/invoice/',
                         'booking' => $this->booking,
                     ]);
     }
