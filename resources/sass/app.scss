@@ -17,7 +17,7 @@
 
 @font-face{
     font-family: gotham-light;
-    src: url('https://prasindotravel.com/fonts/Gotham-Light.ttf');
+    src: url('/public/fonts/Gotham-Light.ttf');
 }
 
 $gotham: 'gotham-light', sans-serif;
@@ -25,6 +25,9 @@ $gotham: 'gotham-light', sans-serif;
 // $playfair: 'Playfair Display', serif;
 // $rubik: 'Rubik', sans-serif;
 // $source-sans-pro: 'Source Sans Pro', sans-serif;
+.bg-grey{
+    background-color: $grey;
+}
 h1,.h1{
     // font-family: $playfair;
     font-family: $gotham;
@@ -64,7 +67,7 @@ h6,.h6{
     font-family: $gotham;
     font-style: normal;
     font-weight: 500;
-    font-size: 14px;
+    font-size: 12px;
     line-height: 17px;
     /* identical to box height */
 

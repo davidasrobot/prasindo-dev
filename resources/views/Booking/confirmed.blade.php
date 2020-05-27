@@ -6,7 +6,7 @@
     <h1 class="display-3">Email Already Confirmed!</h1>
     <p class="lead">
         <strong>Please check your email</strong>
-        for further instructions on how to complete your booking.
+        for details your booking.
     </p>
     <hr>
     <p>
@@ -14,7 +14,7 @@
     </p>
     <p class="lead">
     <a class="btn btn-primary rounded-0 px-5 text-uppercase font-weight-bold" href="/" role="button">
-        Check Order Status
+        Back To Homepage
     </a>
     </p>
 </div>
@@ -23,7 +23,7 @@
     <h1 class="display-3">Email Confirmed!</h1>
     <p class="lead">
         <strong>Please check your email</strong>
-        for further instructions on how to complete your booking.
+        for details your booking.
     </p>
     <hr>
     <p>
@@ -31,7 +31,7 @@
     </p>
     <p class="lead">
     <a class="btn btn-primary rounded-0 px-5 text-uppercase font-weight-bold" href="/" role="button">
-        Check Order Status
+        Back To Homepage
     </a>
     </p>
 </div>

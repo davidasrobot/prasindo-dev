@@ -33,7 +33,7 @@
                     <div class="col">
                         <select name="golf_package_id" required class="form-control">
                             @foreach ($golves as $g)
-                                <option value="{{$g->id}}">{{$g->name}} - {{$g->price}}</option>
+                                <option value="{{$g->id}}">{{$g->name}} - IDR {{number_format($g->price, 2)}}</option>
                             @endforeach
                         </select>
                     </div>

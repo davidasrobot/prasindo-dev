@@ -99,23 +99,32 @@
         </div>
     
         {{-- Destination --}}
-        <div class="row py-10">
-            <div class="col-md-8">
-                <img class="img-fluid" src="{{asset('images/package-2.png')}}" alt="package-2">
-            </div>
-            <div class="col-md-4 py-5 order-1">
-                <h4 class="h4">Package 1</h4>
-                <h6 class="text-small">Weekday, 3 Days 2 Night</h6>
-                <h5 class="h5 text-orange">IDR 5.456.196 / Person</h5>
-                <p class="py-3">Enjoy three days in vibrant Bogor and play golf at some of the best Indonesian courses.</p>
-                <ul class="pl-3">
-                    @for ($i = 0; $i < 3; $i++)
-                        <li class="mb-2">Luxury accommodation</li>
-                    @endfor
-                </ul>
-                <button class="btn btn-outline-primary px-5 text-uppercase rounded-0 font-weight-bold">view more</button>
-            </div>
-        </div>
+        @php
+            $i = 0
+        @endphp
+        @foreach ($golves as $g)
+            @foreach ($g->package as $item)
+                <div class="row py-10">
+                    <div class="col-md-8">
+                        <img class="img-fluid" src="{{Voyager::image($item->image)}}" alt="package-2">
+                    </div>
+                    @if ($i % 2 == 0)
+                        <div class="col col-md-4 py-5 order-first">
+                    @else
+                        <div class="col col-md-4 py-5">
+                    @endif
+                        <h4 class="h4">{{$item->name}}</h4>
+                        <h6 class="text-small">{{$item->day}} Days {{$item->night}} Night</h6>
+                        <h5 class="h5 text-orange">IDR {{number_format($item->price, 2)}} / Person</h5>
+                        <p class="py-3">{{$item->description}}</p>
+                        <a href="/golf/{{$item->Golf->id}}" class="btn btn-outline-primary px-5 text-uppercase rounded-0 font-weight-bold">view more</a>
+                    </div>
+                </div>
+                @php
+                    $i++
+                @endphp
+            @endforeach
+        @endforeach
         <div class="row py-10">
             <div class="col-md-4 py-5 order-1">
                 <h4 class="h4">Package 1</h4>

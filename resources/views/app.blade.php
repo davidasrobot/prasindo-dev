@@ -9,6 +9,7 @@
         <link rel="stylesheet" type="text/css" href="{{ asset('/css/app.css') }}">
         <link rel="stylesheet" type="text/css" href="{{ asset('/vendor/slick/slick/slick.css') }}">
         <link rel="stylesheet" type="text/css" href="{{ asset('/vendor/slick/slick/slick-theme.css') }}">
+        <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet" />
     </head>
     <body>
         <nav id="navbar" class="navbar sticky-top navbar-expand-lg navbar-light bg-light px-0 ">
@@ -31,7 +32,7 @@
                   </ul>
                   <ul class="navbar-nav ml-auto">
                       <li class="nav-item">
-                          <a href="/booking" class="nav-link btn btn-primary rounded-0 text-white px-5 ">
+                          <a href="/booking/" class="nav-link btn btn-primary rounded-0 text-white px-5 ">
                             Book
                           </a>
                       </li>
@@ -91,6 +92,7 @@
         </div>
         <script type="text/javascript" src="{{ asset('/js/app.js') }}"></script>
         <script type="text/javascript" src="{{ asset('/vendor/slick/slick/slick.min.js') }}"></script>
+        <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
         @yield('javascript')
         <script>
             $(document).ready(function () {

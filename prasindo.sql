@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.1
+-- version 4.9.4
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: May 16, 2020 at 10:01 AM
--- Server version: 10.4.11-MariaDB
--- PHP Version: 7.4.3
+-- Host: localhost:3306
+-- Generation Time: May 26, 2020 at 10:42 AM
+-- Server version: 5.7.29-cll-lve
+-- PHP Version: 7.3.6
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -47,7 +47,33 @@ CREATE TABLE `bookings` (
 
 INSERT INTO `bookings` (`id`, `fullname`, `phone`, `email`, `created_at`, `updated_at`, `total`, `dp`, `email_verified_at`, `due_date`) VALUES
 (6, 'asd', '12309123992', 'hosting@clevara.id', '2020-05-12 21:55:14', '2020-05-12 22:00:35', 37800000, 7560000, '2020-05-12 22:00:35', '2020-05-28'),
-(7, 'robot', '1234567890123', 'admin@admin.com', '2020-05-13 14:43:36', '2020-05-13 14:43:52', 1400000, 280000, '2020-05-13 14:43:52', '2020-05-28');
+(7, 'robot', '1234567890123', 'admin@admin.com', '2020-05-13 14:43:36', '2020-05-13 14:43:52', 1400000, 280000, '2020-05-13 14:43:52', '2020-05-28'),
+(8, 'robot', '12345678987', 'yogasakajr@gmail.com', '2020-05-16 07:42:55', '2020-05-16 07:42:55', 24200000, 4840000, NULL, '2020-05-31'),
+(9, 'robot', '1234567890123', 'yogasakajr@gmail.com', '2020-05-16 08:04:14', '2020-05-16 08:04:14', 24200000, 4840000, NULL, '2020-05-31'),
+(10, 'robot', '1234567890123', 'yogasakajr@gmail.com', '2020-05-16 08:05:47', '2020-05-16 08:16:15', 24200000, 4840000, '2020-05-16 08:16:15', '2020-05-31'),
+(11, 'asd', '1234567890123', 'admin@admin.com', '2020-05-19 05:00:02', '2020-05-19 05:00:02', 24200000, 4840000, NULL, '2020-06-03'),
+(12, 'asd', '1234567890123', 'admin@admin.com', '2020-05-19 05:02:24', '2020-05-19 05:02:24', 24200000, 4840000, NULL, '2020-06-03'),
+(13, 'asd', '1234567890123', 'admin@admin.com', '2020-05-19 05:04:26', '2020-05-19 05:04:26', 24200000, 4840000, NULL, '2020-06-03'),
+(14, 'asd', '12309123992', 'admin@admin.com', '2020-05-19 05:05:21', '2020-05-19 05:05:21', 24200000, 4840000, NULL, '2020-06-03'),
+(15, 'asd', '12309123992', 'admin@admin.com', '2020-05-19 05:07:20', '2020-05-19 05:07:20', 24200000, 4840000, NULL, '2020-06-03'),
+(16, 'asd', '12309123992', 'admin@admin.com', '2020-05-19 05:08:30', '2020-05-19 05:08:30', 24200000, 4840000, NULL, '2020-06-03'),
+(17, 'asd', '12309123992', 'admin@admin.com', '2020-05-19 05:09:00', '2020-05-19 05:09:00', 24200000, 4840000, NULL, '2020-06-03'),
+(18, 'asd', '12309123992', 'admin@admin.com', '2020-05-19 05:09:51', '2020-05-19 05:09:51', 24200000, 4840000, NULL, '2020-06-03'),
+(19, 'asd', '12309123992', 'admin@admin.com', '2020-05-19 05:13:46', '2020-05-19 05:13:46', 24200000, 4840000, NULL, '2020-06-03'),
+(20, 'asd', '1234567890123', 'yogasakajr@gmail.com', '2020-05-19 05:16:45', '2020-05-19 05:16:45', 24200000, 4840000, NULL, '2020-06-03'),
+(21, 'asd', '1234567890123', 'yogasakajr@gmail.com', '2020-05-19 05:22:17', '2020-05-19 05:22:17', 24200000, 4840000, NULL, '2020-06-03'),
+(22, 'asdasd', '1234567890123', 'yogasakajr@gmail.com', '2020-05-19 05:24:06', '2020-05-19 05:24:06', 24200000, 4840000, NULL, '2020-06-03'),
+(23, 'asd', '1234567890123', 'admin@admin.com', '2020-05-19 05:26:19', '2020-05-19 05:26:19', 24200000, 4840000, NULL, '2020-06-03'),
+(24, 'asd', '1234567890123', 'admin@admin.com', '2020-05-19 05:27:32', '2020-05-19 05:27:32', 24200000, 4840000, NULL, '2020-06-03'),
+(25, 'asd', '1234567890123', 'admin@admin.com', '2020-05-19 05:28:25', '2020-05-19 05:28:25', 24200000, 4840000, NULL, '2020-06-03'),
+(26, 'asdasd', '1234567890123', 'admin@admin.com', '2020-05-19 05:31:02', '2020-05-19 05:31:02', 24200000, 4840000, NULL, '2020-06-03'),
+(27, 'asdasd', '1234567890123', 'admin@admin.com', '2020-05-19 05:32:40', '2020-05-19 05:32:40', 24200000, 4840000, NULL, '2020-06-03'),
+(28, 'asdad', '1231231231', 'yogasakajr@gmail.com', '2020-05-19 05:33:51', '2020-05-19 05:33:51', 24200000, 4840000, NULL, '2020-06-03'),
+(29, 'asdad', '1231231231', 'yogasakajr@gmail.com', '2020-05-19 05:39:41', '2020-05-19 05:39:41', 24200000, 4840000, NULL, '2020-06-03'),
+(30, 'asdasd', '1234567890123', 'yogasakajr@gmail.com', '2020-05-19 05:41:33', '2020-05-19 05:41:33', 24200000, 4840000, NULL, '2020-06-03'),
+(31, 'asdasd', '1234567890123', 'yogasakajr@gmail.com', '2020-05-19 05:57:46', '2020-05-19 05:57:46', 24200000, 4840000, NULL, '2020-06-03'),
+(32, 'asdasd', '1234567890123', 'yogasakajr@gmail.com', '2020-05-19 06:01:19', '2020-05-19 06:01:55', 24200000, 4840000, '2020-05-19 06:01:55', '2020-06-03'),
+(33, 'asd', '1234567890123', 'yogasakajr@gmail.com', '2020-05-19 06:08:05', '2020-05-19 06:08:05', 1100000, 220000, NULL, '2020-06-03');
 
 -- --------------------------------------------------------
 
@@ -64,7 +90,7 @@ CREATE TABLE `booking_cars` (
   `days` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
-  `notes` text COLLATE utf8mb4_unicode_ci DEFAULT NULL
+  `notes` text COLLATE utf8mb4_unicode_ci
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
@@ -73,7 +99,8 @@ CREATE TABLE `booking_cars` (
 
 INSERT INTO `booking_cars` (`id`, `car_rent_id`, `start_date`, `end_date`, `booking_id`, `days`, `created_at`, `updated_at`, `notes`) VALUES
 (7, 2, '2020-06-13', '2020-06-20', 6, '7', '2020-05-12 21:55:14', '2020-05-12 21:55:14', NULL),
-(8, 1, '2020-06-13', '2020-06-27', 7, '14', '2020-05-13 14:43:36', '2020-05-13 14:43:36', NULL);
+(8, 1, '2020-06-13', '2020-06-27', 7, '14', '2020-05-13 14:43:36', '2020-05-13 14:43:36', NULL),
+(9, 1, '2020-06-19', '2020-06-30', 33, '11', '2020-05-19 06:08:05', '2020-05-19 06:08:05', NULL);
 
 -- --------------------------------------------------------
 
@@ -85,7 +112,7 @@ CREATE TABLE `booking_golves` (
   `id` int(10) UNSIGNED NOT NULL,
   `golf_package_id` int(11) NOT NULL,
   `pax` tinytext COLLATE utf8mb4_unicode_ci NOT NULL,
-  `notes` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `notes` text COLLATE utf8mb4_unicode_ci,
   `booking_id` int(11) NOT NULL,
   `start_date` date NOT NULL,
   `end_date` date NOT NULL,
@@ -93,6 +120,37 @@ CREATE TABLE `booking_golves` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `booking_golves`
+--
+
+INSERT INTO `booking_golves` (`id`, `golf_package_id`, `pax`, `notes`, `booking_id`, `start_date`, `end_date`, `days`, `created_at`, `updated_at`) VALUES
+(4, 1, '4', NULL, 8, '2020-06-16', '2020-06-30', '14', '2020-05-16 07:42:55', '2020-05-16 07:42:55'),
+(5, 1, '4', NULL, 9, '2020-06-16', '2020-06-24', '8', '2020-05-16 08:04:14', '2020-05-16 08:04:14'),
+(6, 1, '4', NULL, 10, '2020-06-16', '2020-06-24', '8', '2020-05-16 08:05:47', '2020-05-16 08:05:47'),
+(7, 1, '4', NULL, 11, '2020-06-19', '2020-06-30', '11', '2020-05-19 05:00:02', '2020-05-19 05:00:02'),
+(8, 1, '4', NULL, 12, '2020-06-19', '2020-06-30', '11', '2020-05-19 05:02:24', '2020-05-19 05:02:24'),
+(9, 1, '4', NULL, 13, '2020-06-19', '2020-06-30', '11', '2020-05-19 05:04:26', '2020-05-19 05:04:26'),
+(10, 1, '4', NULL, 14, '2020-06-19', '2020-06-30', '11', '2020-05-19 05:05:21', '2020-05-19 05:05:21'),
+(11, 1, '4', NULL, 15, '2020-06-19', '2020-06-30', '11', '2020-05-19 05:07:20', '2020-05-19 05:07:20'),
+(12, 1, '4', NULL, 16, '2020-06-19', '2020-06-30', '11', '2020-05-19 05:08:30', '2020-05-19 05:08:30'),
+(13, 1, '4', NULL, 17, '2020-06-19', '2020-06-30', '11', '2020-05-19 05:09:00', '2020-05-19 05:09:00'),
+(14, 1, '4', NULL, 18, '2020-06-19', '2020-06-30', '11', '2020-05-19 05:09:51', '2020-05-19 05:09:51'),
+(15, 1, '4', NULL, 19, '2020-06-19', '2020-06-30', '11', '2020-05-19 05:13:46', '2020-05-19 05:13:46'),
+(16, 1, '4', NULL, 20, '2020-06-19', '2020-06-30', '11', '2020-05-19 05:16:45', '2020-05-19 05:16:45'),
+(17, 1, '4', NULL, 21, '2020-06-19', '2020-06-30', '11', '2020-05-19 05:22:17', '2020-05-19 05:22:17'),
+(18, 1, '4', NULL, 22, '2020-06-19', '2020-06-30', '11', '2020-05-19 05:24:06', '2020-05-19 05:24:06'),
+(19, 1, '4', NULL, 23, '2020-06-19', '2020-06-30', '11', '2020-05-19 05:26:19', '2020-05-19 05:26:19'),
+(20, 1, '4', NULL, 24, '2020-06-19', '2020-06-30', '11', '2020-05-19 05:27:32', '2020-05-19 05:27:32'),
+(21, 1, '4', NULL, 25, '2020-06-19', '2020-06-30', '11', '2020-05-19 05:28:25', '2020-05-19 05:28:25'),
+(22, 1, '4', NULL, 26, '2020-06-19', '2020-06-30', '11', '2020-05-19 05:31:02', '2020-05-19 05:31:02'),
+(23, 1, '4', NULL, 27, '2020-06-19', '2020-06-30', '11', '2020-05-19 05:32:40', '2020-05-19 05:32:40'),
+(24, 1, '4', NULL, 28, '2020-06-19', '2020-06-30', '11', '2020-05-19 05:33:51', '2020-05-19 05:33:51'),
+(25, 1, '4', NULL, 29, '2020-06-19', '2020-06-30', '11', '2020-05-19 05:39:41', '2020-05-19 05:39:41'),
+(26, 1, '4', NULL, 30, '2020-06-19', '2020-06-30', '11', '2020-05-19 05:41:33', '2020-05-19 05:41:33'),
+(27, 1, '4', NULL, 31, '2020-06-19', '2020-06-30', '11', '2020-05-19 05:57:46', '2020-05-19 05:57:46'),
+(28, 1, '4', NULL, 32, '2020-06-19', '2020-06-30', '11', '2020-05-19 06:01:19', '2020-05-19 06:01:19');
 
 -- --------------------------------------------------------
 
@@ -168,9 +226,10 @@ CREATE TABLE `car_rent_images` (
 
 INSERT INTO `car_rent_images` (`id`, `car_rents_id`, `name`, `image`, `created_at`, `updated_at`) VALUES
 (1, 1, 'Toyota Innova', 'car-rent-images\\May2020\\F2SVIRqExMDNqmG34XLn.png', '2020-05-04 12:46:00', '2020-05-11 09:53:18'),
-(2, 2, 'Wuling Cortez', 'car-rent-images\\May2020\\uZmg1fZe0bDlJ7tQrT3Y.png', '2020-05-11 09:49:00', '2020-05-11 09:53:09'),
+(2, 2, 'Wuling Cortez', 'car-rent-images/May2020/VKkigtluqT9eOK62Zodo.webp', '2020-05-11 09:49:00', '2020-05-19 04:14:24'),
 (3, 3, 'Renault TRIBER', 'car-rent-images\\May2020\\bFbDjIYOJIKsmRchiX6j.png', '2020-05-11 09:49:00', '2020-05-11 09:53:00'),
-(4, 4, 'Toyota Sienta', 'car-rent-images\\May2020\\zm8ehlxtMXESh19tagQM.png', '2020-05-11 09:50:00', '2020-05-11 09:52:52');
+(4, 4, 'Toyota Sienta', 'car-rent-images\\May2020\\zm8ehlxtMXESh19tagQM.png', '2020-05-11 09:50:00', '2020-05-11 09:52:52'),
+(5, 3, 'Renault TRIBER', 'car-rent-images/May2020/1Uh49SoZ9cTntnBySe6q.webp', '2020-05-19 04:58:24', '2020-05-19 04:58:24');
 
 -- --------------------------------------------------------
 
@@ -184,14 +243,14 @@ CREATE TABLE `data_rows` (
   `field` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `type` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `display_name` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `required` tinyint(1) NOT NULL DEFAULT 0,
-  `browse` tinyint(1) NOT NULL DEFAULT 1,
-  `read` tinyint(1) NOT NULL DEFAULT 1,
-  `edit` tinyint(1) NOT NULL DEFAULT 1,
-  `add` tinyint(1) NOT NULL DEFAULT 1,
-  `delete` tinyint(1) NOT NULL DEFAULT 1,
-  `details` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `order` int(11) NOT NULL DEFAULT 1
+  `required` tinyint(1) NOT NULL DEFAULT '0',
+  `browse` tinyint(1) NOT NULL DEFAULT '1',
+  `read` tinyint(1) NOT NULL DEFAULT '1',
+  `edit` tinyint(1) NOT NULL DEFAULT '1',
+  `add` tinyint(1) NOT NULL DEFAULT '1',
+  `delete` tinyint(1) NOT NULL DEFAULT '1',
+  `details` text COLLATE utf8mb4_unicode_ci,
+  `order` int(11) NOT NULL DEFAULT '1'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
@@ -357,9 +416,9 @@ CREATE TABLE `data_types` (
   `policy_name` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `controller` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `description` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `generate_permissions` tinyint(1) NOT NULL DEFAULT 0,
-  `server_side` tinyint(4) NOT NULL DEFAULT 0,
-  `details` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `generate_permissions` tinyint(1) NOT NULL DEFAULT '0',
+  `server_side` tinyint(4) NOT NULL DEFAULT '0',
+  `details` text COLLATE utf8mb4_unicode_ci,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -399,7 +458,7 @@ CREATE TABLE `failed_jobs` (
   `queue` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `payload` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
   `exception` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
-  `failed_at` timestamp NOT NULL DEFAULT current_timestamp()
+  `failed_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
@@ -443,8 +502,8 @@ CREATE TABLE `golf_includes` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   `golves_id` int(11) DEFAULT NULL,
-  `description` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `list` text COLLATE utf8mb4_unicode_ci DEFAULT NULL
+  `description` text COLLATE utf8mb4_unicode_ci,
+  `list` text COLLATE utf8mb4_unicode_ci
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
@@ -502,8 +561,8 @@ CREATE TABLE `golf_packages` (
   `image` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
-  `day` tinyint(4) NOT NULL DEFAULT 2,
-  `night` tinyint(4) NOT NULL DEFAULT 1
+  `day` tinyint(4) NOT NULL DEFAULT '2',
+  `night` tinyint(4) NOT NULL DEFAULT '1'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
@@ -600,8 +659,9 @@ INSERT INTO `hotel_images` (`id`, `image`, `image_name`, `created_at`, `updated_
 (5, 'hotel-images\\May2020\\x0nTRgkCvTeMZsAkiDpe.png', 'Hotel AA', '2020-05-11 10:34:49', '2020-05-11 10:34:49', 5),
 (6, 'hotel-images\\May2020\\v4ne4IXwvlugkvraS82e.png', 'Hotel BB', '2020-05-11 10:35:02', '2020-05-11 10:35:02', 6),
 (7, 'hotel-images\\May2020\\3z952lEckmHnWyoZplsp.png', 'Hotel CC', '2020-05-11 10:35:16', '2020-05-11 10:35:16', 7),
-(8, 'hotel-images\\May2020\\DeR6YP7RkyyGfewiQqyw.png', 'Hotel DD', '2020-05-11 10:35:29', '2020-05-11 10:35:29', 8),
-(9, 'hotel-images\\May2020\\Bsdm0ou5lqj6mAdG3Xvf.png', 'Hotel Santika', '2020-05-11 10:41:58', '2020-05-11 10:41:58', 1);
+(8, 'hotel-images/May2020/ioZNfkzFYQ0EOEF6lXHC.jpeg', 'Hotel DD', '2020-05-11 10:35:00', '2020-05-18 12:31:09', 8),
+(9, 'hotel-images\\May2020\\Bsdm0ou5lqj6mAdG3Xvf.png', 'Hotel Santika', '2020-05-11 10:41:58', '2020-05-11 10:41:58', 1),
+(10, 'hotel-images/May2020/cjJXC9OUYDCae16BJ4G8.png', 'Hotel Test', '2020-05-18 12:32:54', '2020-05-18 12:32:54', 2);
 
 -- --------------------------------------------------------
 
@@ -642,7 +702,7 @@ CREATE TABLE `menu_items` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   `route` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `parameters` text COLLATE utf8mb4_unicode_ci DEFAULT NULL
+  `parameters` text COLLATE utf8mb4_unicode_ci
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
@@ -988,10 +1048,10 @@ CREATE TABLE `settings` (
   `id` int(10) UNSIGNED NOT NULL,
   `key` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `display_name` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `value` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `details` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `value` text COLLATE utf8mb4_unicode_ci,
+  `details` text COLLATE utf8mb4_unicode_ci,
   `type` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `order` int(11) NOT NULL DEFAULT 1,
+  `order` int(11) NOT NULL DEFAULT '1',
   `group` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
@@ -1128,7 +1188,7 @@ CREATE TABLE `users` (
   `email_verified_at` timestamp NULL DEFAULT NULL,
   `password` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `remember_token` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `settings` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `settings` text COLLATE utf8mb4_unicode_ci,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -1138,7 +1198,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `role_id`, `name`, `email`, `avatar`, `email_verified_at`, `password`, `remember_token`, `settings`, `created_at`, `updated_at`) VALUES
-(1, 1, 'admin', 'admin@admin.com', 'users/default.png', NULL, '$2y$10$Qyr01qmTg.EfzjfnD/vDp.jN3BEcY2f5L0vpMfRC1sHTw2C1.ACfC', NULL, NULL, '2020-05-04 12:22:48', '2020-05-04 12:22:48');
+(1, 1, 'admin', 'admin@admin.com', 'users/default.png', NULL, '$2y$10$Qyr01qmTg.EfzjfnD/vDp.jN3BEcY2f5L0vpMfRC1sHTw2C1.ACfC', 'KBrad5SDUZJM6h9gMW5c9vGtyti1jvT3BtuBh7mOYIdFA4qB3vOB1Laplj79', NULL, '2020-05-04 12:22:48', '2020-05-04 12:22:48');
 
 -- --------------------------------------------------------
 
@@ -1352,19 +1412,19 @@ ALTER TABLE `user_roles`
 -- AUTO_INCREMENT for table `bookings`
 --
 ALTER TABLE `bookings`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
 
 --
 -- AUTO_INCREMENT for table `booking_cars`
 --
 ALTER TABLE `booking_cars`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `booking_golves`
 --
 ALTER TABLE `booking_golves`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
 
 --
 -- AUTO_INCREMENT for table `car_rents`
@@ -1382,7 +1442,7 @@ ALTER TABLE `car_rent_categories`
 -- AUTO_INCREMENT for table `car_rent_images`
 --
 ALTER TABLE `car_rent_images`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `data_rows`
@@ -1442,7 +1502,7 @@ ALTER TABLE `hotels`
 -- AUTO_INCREMENT for table `hotel_images`
 --
 ALTER TABLE `hotel_images`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `menus`

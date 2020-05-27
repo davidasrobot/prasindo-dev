@@ -16945,7 +16945,11 @@ readers do not read off random characters that represent icons */
 
 @font-face {
   font-family: gotham-light;
-  src: url("https://prasindotravel.com/fonts/Gotham-Light.ttf");
+  src: url("/public/fonts/Gotham-Light.ttf");
+}
+
+.bg-grey {
+  background-color: #b8b8b8;
 }
 
 h1,
@@ -16991,7 +16995,7 @@ h6,
   font-family: "gotham-light", sans-serif;
   font-style: normal;
   font-weight: 500;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 17px;
   /* identical to box height */
   letter-spacing: 0.0125em;

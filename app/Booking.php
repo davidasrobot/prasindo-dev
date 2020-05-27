@@ -20,4 +20,9 @@ class Booking extends Model
     {
         return $this->hasOne('App\BookingGolf');
     }
+
+    public function Travel()
+    {
+        return $this->hasOne('App\BookingTravel');
+    }
 }

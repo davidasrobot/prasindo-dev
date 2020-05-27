@@ -1,7 +1,7 @@
 @extends('app')
 
 @section('title')
-    Booking - Golf
+    Booking - Travel
 @endsection
 @section('content')
     <div class="px-10 text-center form py-7">
@@ -9,7 +9,7 @@
         <p class="pb-5">Fill the field with real information for book the package</p>
 
         <div class="px-10">
-            <form action="/booking/car" method="post">
+            <form action="/booking/travel" method="post">
                 {{ csrf_field() }}
                 <div class="form-row my-2">
                   <div class="col">
@@ -23,10 +23,17 @@
                     <input type="email" name="email" class="form-control" placeholder="Email Address" required>
                 </div>
                 <div class="form-row my-2">
+                    <div class="col-2">
+                        <select name="pax" required class="form-control">
+                            @for ($i = 4; $i < $count=20; $i++)
+                                <option value="{{$i}}">{{$i}} pax</option>
+                            @endfor
+                        </select>
+                    </div>
                     <div class="col">
-                        <select name="car_rent_id" required class="form-control">
-                            @foreach ($cars as $g)
-                                <option value="{{$g->id}}">{{$g->name}} - {{$g->capacity}} - IDR {{number_format($g->price, 2)}}</option>
+                        <select name="travel_package_id" required class="form-control">
+                            @foreach ($travels as $g)
+                                <option value="{{$g->id}}">{{$g->name}} - IDR {{number_format($g->price, 2)}}</option>
                             @endforeach
                         </select>
                     </div>
@@ -34,7 +41,7 @@
                 <div class="form-row">
                     <div class="form-group col">
                         <label class="h6 font-weight-bold" for="start_date">From</label>
-                        <input type="date" id="start_date" name="start_date" class="form-control" required">
+                        <input type="date" id="start_date"  name="start_date" class="form-control" required">
                     </div>
                     <div class="form-group col">
                         <label class="h6 font-weight-bold" for="end_date">To</label>
@@ -66,6 +73,7 @@
         </div>
     </div>
 @endsection
+
 @section('javascript')
     <script>    
         $(document).ready(function(){
