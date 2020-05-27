@@ -125,7 +125,7 @@
                 @endphp
             @endforeach
         @endforeach
-        <div class="row py-10">
+        {{-- <div class="row py-10">
             <div class="col-md-4 py-5 order-1">
                 <h4 class="h4">Package 1</h4>
                 <h6 class="text-small">Weekday, 3 Days 2 Night</h6>
@@ -141,7 +141,7 @@
             <div class="col-md-8">
                 <img class="img-fluid" src="{{asset('images/package-1.png')}}" alt="package-1">
             </div>
-        </div>
+        </div> --}}
     </section>
 @endsection
 
