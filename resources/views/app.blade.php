@@ -40,11 +40,11 @@
                 </div>
                 <div id="mySidenav" class="sidenav">
                     <a href="javascript:void(0)" id="close-nav" class="closebtn"><i class="fa fa-times"></i></a>
-                    <a href="#" class="py-5 text-center"><img width="150" src="{{asset('images/logo.png')}}" alt=""></a>
+                    <a href="/" class="py-5 text-center"><img width="150" src="{{asset('images/logo.png')}}" alt=""></a>
                     <a href="#">Destination</a>
                     <a href="#">Offers</a>
                     <a href="#">About Us</a>
-                    <a href="#" class="btn btn-primary px-3 rounded-0 text-white">Book</a>
+                    <a href="/booking/" class="btn btn-primary px-3 rounded-0 text-white">Book</a>
                   </div>
             </div>
         </nav>
