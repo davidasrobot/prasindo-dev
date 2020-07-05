@@ -1,7 +1,7 @@
 @extends('app')
 
 @section('title')
-    list of cars
+    {{$cars->name}}
 @endsection
 
 @section('header')
@@ -36,10 +36,23 @@
             </tbody>
         </table>
     </div>
+    <div class="specs">
+        <h5 class="h5 text-uppercase my-5">Available Package</h5>
+        <table class="table">
+            <tbody class="text-uppercase">
+              @foreach ($cars->Packages as $item)
+                <tr>
+                    <td class="py-4">{{$item->destination}}</td>
+                    <td class="py-4">Rp. {{number_format($item->price, 2)}}</td>
+                </tr>
+              @endforeach
+            </tbody>
+        </table>
+    </div>
     <div class="py-10 text-center">
         <h3 class="h3">Are You Ready for New Adventure?</h3>
         <p class="py-3">Let us to give you an amazing experience and journey, Click the button for rent this car</p>
-        <button class="btn btn-primary px-5 rounded-0 text-uppercase">rent now</button>
+        <a href="/booking/car" class="btn btn-primary px-5 rounded-0 text-uppercase">rent now</a>
     </div>
     <div class="card-item-slider py-7">
         <h5 class="py-3 text-center">OTHER CAR</h5>

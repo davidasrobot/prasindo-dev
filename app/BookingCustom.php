@@ -26,7 +26,7 @@ class BookingCustom extends Model
     ];
     public function City()
     {
-        return $this->hasMany(Bookingcustomcity::class);
+        return $this->hasMany(BookingCustomCity::class);
     }
 
 }

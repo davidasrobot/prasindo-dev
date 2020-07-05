@@ -19,7 +19,7 @@ class OrderConfirmation extends Mailable
      */
     public function __construct($booking)
     {
-        $this->booking = Booking::findOrFail($booking);
+        $this->booking = Booking::where('uuid',$booking)->firstOrFail();
     }
 
     /**
@@ -33,7 +33,7 @@ class OrderConfirmation extends Mailable
                    ->view('Mail.order')
                    ->with(
                     [
-                        'link' => 'https://prasindotravel.com/booking/invoice/',
+                        'link' => env('APP_URL', 'Laravel').'/booking/invoice/',
                         'booking' => $this->booking,
                     ]);
     }

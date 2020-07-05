@@ -32,7 +32,7 @@ class EmailConfirmation extends Mailable
                    ->view('Mail.confirmation')
                    ->with(
                     [
-                        'link' => 'https://prasindotravel.com/booking/confirm/',
+                        'link' => env('APP_URL', 'Laravel').'/booking/confirm/',
                         'id' => $this->booking_id,
                     ]);
     }

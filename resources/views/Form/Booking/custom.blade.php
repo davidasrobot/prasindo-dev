@@ -144,6 +144,15 @@
                     <textarea name="notes" cols="30" rows="4" class="form-control" placeholder="OTHER SPECIFIC REQUIREMENTS, PLEASE LIST:
                     If you have specific budget, please indicate. Package will be tailored to fit your budget."></textarea>
                 </div>
+
+                <div class="my-5 text-center">
+                    <img class="img-fluid" src="{{captcha_src()}}" alt="captcha">
+                    <div class="form-group my-3">
+                        <input type="text" class="mx-auto" name="captcha" id="captcha" required>
+                    </div>
+                </div>
+
+                
                 <div class="custom-control custom-checkbox w-75 mx-auto my-3">
                     <input type="checkbox" class="custom-control-input" name="check" id="customCheck1" required>
                     <label class="custom-control-label" for="customCheck1">I Would like to Book and receive email for booking confirmation from PRASINDO GOLF & TRAVEL SERVICE. <a href="#">SEE PRIVACY AND POLICY</a></label>

@@ -4,11 +4,15 @@ namespace App\Http\Controllers;
 
 use App\Booking;
 use App\CarRent;
+use App\CarRentPackage;
 use App\Mail\EmailConfirmation;
+use App\Mail\OrderConfirmation;
 use DateTime;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Validator;
+use Ramsey\Uuid\Uuid;
 
 class BookingCarController extends Controller
 {
@@ -29,7 +33,8 @@ class BookingCarController extends Controller
      */
     public function create()
     {
-        $cars = CarRent::all();
+        // $cars = CarRent::all();
+        $cars = CarRentPackage::orderBy('car_rent_id', 'asc')->get();
         return view('Form.Booking.car', compact('cars'));
     }
 
@@ -47,20 +52,21 @@ class BookingCarController extends Controller
             'phone' => 'required',
             'email' => 'required',
             'start_date' => 'required',
-            'end_date' => 'required',
-            'car_rent_id' => 'required'
+            // 'end_date' => 'required',
+            'car_rent_id' => 'required',
+            'captcha' => 'required|captcha',
         ]);
         if ($validator->fails()) {
             return redirect()->back()
                         ->withErrors($validator)
                         ->withInput();
         }
-        $package = CarRent::findOrFail($request->car_rent_id);
+        $package = CarRentPackage::findOrFail($request->car_rent_id);
         $sdate = new DateTime($request->start_date);
-        $edate = new DateTime($request->end_date);
-        $interval = $sdate->diff($edate);
-        $days = $interval->format('%a');
-        $total = $package->price * $days;
+        // $edate = new DateTime($request->end_date);
+        // $interval = $sdate->diff($edate);
+        // $days = $interval->format('%a');
+        $total = $package->price;
         $dp = $total * 0.2;
         $dueDate = now()->add(15, 'days');
 
@@ -71,17 +77,25 @@ class BookingCarController extends Controller
             'email' => $request->email,
             'total' => $total,
             'dp' => $dp,
-            'due_date' => $dueDate
+            'due_date' => $dueDate,
+            'uuid' => Uuid::uuid4()->toString()
         ]);
 
         $createBooking->car()->create([
             'car_rent_id' => $request->car_rent_id,
             'start_date' => $request->start_date,
-            'end_date' => $request->end_date,
-            'days' => $days,
+            // 'end_date' => $request->end_date,
+            // 'days' => $days,
             'notes' => $request->notes
         ]);
-        Mail::to($request->email)->send(new EmailConfirmation($createBooking->id));
+        if(Auth::check()){
+            if (auth()->user()->email_verified_at !== null) {
+                Mail::to($request->email)->send(new OrderConfirmation($createBooking->uuid));
+            }
+            Mail::to($request->email)->send(new EmailConfirmation($createBooking->uuid));
+        }else{
+            Mail::to($request->email)->send(new EmailConfirmation($createBooking->uuid));
+        }
         return redirect('/booking/success');
     }
 

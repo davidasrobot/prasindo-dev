@@ -15,7 +15,8 @@ class BookingGolf extends Model
         'golf_package_id',
         'start_date',
         'end_date',
-        'days'
+        'days',
+        'notes'
     ];
 
     public function Booking()

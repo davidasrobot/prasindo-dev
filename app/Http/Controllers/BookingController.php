@@ -31,7 +31,7 @@ class BookingController extends Controller
      */
     public function show($id)
     {
-        $bookings = Booking::findOrFail($id);
+        $bookings = Booking::where('uuid', $id)->firstOrFail();
         return view('Booking.invoice', compact([
             'bookings'
         ]));
@@ -55,16 +55,16 @@ class BookingController extends Controller
      * @param  \App\Booking  $booking
      * @return \Illuminate\Http\Response
      */
-    public function confirm($id)
+    public function confirm($uuid)
     {
-        $booking = Booking::findOrFail($id);
+        $booking = Booking::where('uuid', $uuid)->first();
         if($booking->email_verified_at !== NULL){
             return view('Booking.confirmed')->with(['confirmed' => true]);
         }
         $booking->update([
             'email_verified_at' => now(),
         ]);
-        Mail::to($booking->email)->send(new OrderConfirmation($booking->id));
+        Mail::to($booking->email)->send(new OrderConfirmation($booking->uuid));
         return view('Booking.confirmed');
     }
 

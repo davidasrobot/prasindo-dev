@@ -5,10 +5,13 @@ namespace App\Http\Controllers;
 use App\Booking;
 use App\GolfPackage;
 use App\Mail\EmailConfirmation;
+use App\Mail\OrderConfirmation;
 use DateTime;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Validator;
+use Ramsey\Uuid\Uuid;
 
 class BookingGolfController extends Controller
 {
@@ -48,7 +51,8 @@ class BookingGolfController extends Controller
             'email' => 'required',
             'pax' => 'required|max:4',
             'start_date' => 'required',
-            'end_date' => 'required',
+            'captcha' => 'required|captcha',
+            // 'end_date' => 'required',
             'golf_package_id' => 'required',
         ]);
         if ($validator->fails()) {
@@ -67,23 +71,31 @@ class BookingGolfController extends Controller
             'email' => $request->email,
             'total' => $total,
             'dp' => $dp,
-            'due_date' => $dueDate
+            'due_date' => $dueDate,
+            'uuid' => Uuid::uuid4()->toString()
         ]);
 
         $sdate = new DateTime($request->start_date);
-        $edate = new DateTime($request->end_date);
-        $interval = $sdate->diff($edate);
-        $days = $interval->format('%a');
+        // $edate = new DateTime($request->end_date);
+        // $interval = $sdate->diff($edate);
+        // $days = $interval->format('%a');
 
         $createBooking->golf()->create([
             'pax' => $request->pax,
             'golf_package_id' => $request->golf_package_id,
             'notes' => $request->notes,
             'start_date' => $request->start_date,
-            'end_date' => $request->end_date,
-            'days' => $days
+            // 'end_date' => $request->end_date,
+            // 'days' => $days
         ]);
-        Mail::to($request->email)->send(new EmailConfirmation($createBooking->id));
+        if(Auth::check()){
+            if (auth()->user()->email_verified_at !== null) {
+                Mail::to($request->email)->send(new OrderConfirmation($createBooking->uuid));
+            }
+            Mail::to($request->email)->send(new EmailConfirmation($createBooking->uuid));
+        }else{
+            Mail::to($request->email)->send(new EmailConfirmation($createBooking->uuid));
+        }
         return redirect('/booking/success');
     }
 

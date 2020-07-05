@@ -25,7 +25,7 @@
         $i=0
     @endphp
     @foreach ($hotels->package as $item)
-        <div class="row py-10">
+        <div class="row py-5">
             @if ($i % 2 == 0)
             <div class="col col-md-4 py-5 order-last">
             @else
@@ -54,7 +54,7 @@
         @endphp
     @endforeach
 
-    <div class="card-item-slider py-7">
+    <div class="card-item-slider py-5">
         <h5 class="py-3 text-center">OTHER HOTEL</h5>
         <div class="slick-slider" id="other-car">
             @foreach ($lists as $l)

@@ -76,6 +76,7 @@ class BookingCustomController extends Controller
             'city' => 'required',
             'type' => 'required',
             'check' => 'required',
+            'captcha' => 'required|captcha',
         ]);
         if ($validator->fails()) {
             return redirect()->back()

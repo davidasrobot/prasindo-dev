@@ -1,5 +1,9 @@
 @extends('app')
 
+@section('title')
+    Email Confirmed
+@endsection
+
 @section('content')
 @if ($confirmed ?? '' == true)
 <div class="py-10 px-10 text-center">

@@ -25,4 +25,9 @@ class CarRent extends Model
     {
         return $this->hasMany('App\BookignCar');
     }
+
+    public function Packages()
+    {
+        return $this->hasMany('App\CarRentPackage', 'car_rent_id');
+    }
 }

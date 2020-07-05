@@ -22,15 +22,15 @@
     $i=1;
 @endphp
     @foreach ($recomends as $r)
-    <div class="py-10">
+    <div class="py-5">
         <div class="row">
             <div class="col-12 col-md-8 order-2">
                 <img class="w-100" src="{{Voyager::image( $r->banner_image )}}" alt="{{$r->name}}">
             </div>
             @if ($i % 2 == 0)
-                <div class="col-12 col-md-4 py-10 order-md-1">
+                <div class="col-12 col-md-4 py-5 order-md-1">
             @else
-                <div class="col-12 col-md-4 py-10 order-md-3">
+                <div class="col-12 col-md-4 py-5 order-md-3">
             @endif
                 <h6 class="h6 text-primary">{{$r->city}}, {{$r->location}}</h6>
                 <h4 class="h4">{{$r->name}}</h4>

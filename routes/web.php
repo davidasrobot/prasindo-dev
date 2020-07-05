@@ -32,7 +32,7 @@ Route::post('/booking/travel', 'BookingTravelController@store');
 Route::get('/booking/custom', 'BookingCustomController@create');
 Route::post('/booking/custom', 'BookingCustomController@store');
 
-Route::get('/booking/confirm/{id}', 'BookingController@confirm');
+Route::get('/booking/confirm/{uuid}', 'BookingController@confirm');
 
 Route::get('/booking/success', function () {
     return view('Form.Booking.success');
@@ -42,3 +42,4 @@ Route::get('/booking/success', function () {
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });
+Auth::routes();

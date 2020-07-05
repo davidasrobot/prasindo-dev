@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name=”robots” content=”noindex,nofollow”>
     <link rel="stylesheet" type="text/css" href="{{ asset('/css/app.css') }}">
     <script src="{{asset('/js/app.js')}}"></script>
-    <title>Invoice {{$bookings->fullname}} - {{$bookings->package}}</title>
+    <title>Invoice {{$bookings->fullname}} - {{$bookings->uuid}}</title>
 </head>
 <body>
     <div class="container py-7">
@@ -21,7 +22,7 @@
             </div>
             <div class="col">
                 <h4 class="h4 text-right">INVOICE</h4>
-                <p class="text-right" style="white-space: pre">Invoice Number: <b>{{$bookings->id}}</b>
+                <p class="text-right" style="white-space: pre">Invoice Number: <b>{{$bookings->uuid}}</b>
                     Invoice Date: <b>{{$bookings->created_at}}</b>
                     Due Date: <b>{{$bookings->due_date}}</b>
                 </p>

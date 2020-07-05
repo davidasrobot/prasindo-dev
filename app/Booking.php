@@ -7,8 +7,9 @@ use Illuminate\Database\Eloquent\Model;
 class Booking extends Model
 {
 
+    protected $table = 'bookings';
     protected $fillable = [
-        'id', 'fullname', 'phone', 'email', 'total', 'dp', 'due_date', 'email_verified_at'
+        'id', 'fullname', 'phone', 'email', 'total', 'dp', 'due_date', 'email_verified_at', 'uuid'
     ];
 
     public function Car()

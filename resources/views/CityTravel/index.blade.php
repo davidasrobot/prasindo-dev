@@ -12,52 +12,88 @@
     </div>
 @endsection
 @section('content')
-    <div class="py-7">
+    <div class="py-5">
         <h3 class="h3 text-center">Good Condition Car as Always</h3>
         <p class="text-center">
             Ea voluptate pariatur sit laborum mollit veniam voluptate velit velit elit. Esse ut sit aute commodo voluptate. Duis qui deserunt sit est reprehenderit eu ut occaecat. Proident eiusmod cupidatat voluptate deserunt commodo ipsum cillum duis.
         </p>
     </div>
 
-    <div class="card-item-slider py-7">
+    <div class="card-item-slider py-5">
         <h5 class="py-3">INBOUND</h5>
-        <div class="slick-slider">
-            @foreach ($inbounds as $inbound)
-                <div class="col-3 pl-0">
-                    <div>
-                        <div class="position-absolute text-white card-caption">
-                            <h6 class="text-uppercase">{{$inbound->city}}</h6>
-                            <h6 class="text-uppercase text-small">{{$inbound->location}}</h6>
+        @if ($inbounds->count() >= 4)
+            <div class="slick-slider">
+                @foreach ($inbounds as $inbound)
+                    <div class="col-3 pl-0">
+                        <div>
+                            <div class="position-absolute text-white card-caption">
+                                <h6 class="text-uppercase">{{$inbound->city}}</h6>
+                                <h6 class="text-uppercase text-small">{{$inbound->location}}</h6>
+                            </div>
+                            <a href="/city-travel/{{$inbound->id}}">
+                                <img class="card-image-hover w-100" src="{{ Voyager::image( str_replace('.png', '-thumbnail.png', $inbound->banner_image) ) }}" alt="{{$inbound->city}}-travel">
+                            </a>
                         </div>
-                        <a href="/city-travel/{{$inbound->id}}">
-                            <img class="card-image-hover w-100" src="{{ Voyager::image( str_replace('.png', '-thumbnail.png', $inbound->banner_image) ) }}" alt="{{$inbound->city}}-travel">
-                        </a>
                     </div>
-                </div>
-            @endforeach
-        </div>
+                @endforeach
+            </div>
+        @else
+            <div class="row">
+                @foreach ($inbounds as $inbound)
+                    <div class="col-3 pl-0">
+                        <div>
+                            <div class="position-absolute text-white card-caption">
+                                <h6 class="text-uppercase">{{$inbound->city}}</h6>
+                                <h6 class="text-uppercase text-small">{{$inbound->location}}</h6>
+                            </div>
+                            <a href="/city-travel/{{$inbound->id}}">
+                                <img class="card-image-hover w-100" src="{{ Voyager::image( str_replace('.png', '-thumbnail.png', $inbound->banner_image) ) }}" alt="{{$inbound->city}}-travel">
+                            </a>
+                        </div>
+                    </div>
+                @endforeach
+            </div>
+        @endif
     </div>
 
-    <div class="card-item-slider py-7">
+    <div class="card-item-slider py-5">
         <h5 class="py-3">OUTBOUND</h5>
-        <div class="slick-slider">
-            @foreach ($outbounds as $out)
-                <div class="col-3 pl-0">
-                    <div>
-                        <div class="position-absolute text-white card-caption">
-                            <h6 class="text-uppercase">{{$out->city}}</h6>
-                            <h6 class="text-uppercase text-small">{{$out->location}}</h6>
+        @if ($outbounds->count() >= 4)
+            <div class="slick-slider">
+                @foreach ($outbounds as $out)
+                    <div class="col-3 pl-0">
+                        <div>
+                            <div class="position-absolute text-white card-caption">
+                                <h6 class="text-uppercase">{{$out->city}}</h6>
+                                <h6 class="text-uppercase text-small">{{$out->location}}</h6>
+                            </div>
+                            <a href="/city-travel/{{$out->id}}">
+                                <img class="card-image-hover w-100" src="{{ Voyager::image( str_replace('.png', '-thumbnail.png', $out->banner_image) ) }}" alt="{{$out->city}}-travel">
+                            </a>
                         </div>
-                        <a href="/city-travel/{{$out->id}}">
-                            <img class="card-image-hover w-100" src="{{ Voyager::image( str_replace('.png', '-thumbnail.png', $out->banner_image) ) }}" alt="{{$out->city}}-travel">
-                        </a>
                     </div>
-                </div>
-            @endforeach
-        </div>
+                @endforeach
+            </div>
+        @else
+            <div class="row">
+                @foreach ($outbounds as $out)
+                    <div class="col-3 pl-0">
+                        <div>
+                            <div class="position-absolute text-white card-caption">
+                                <h6 class="text-uppercase">{{$out->city}}</h6>
+                                <h6 class="text-uppercase text-small">{{$out->location}}</h6>
+                            </div>
+                            <a href="/city-travel/{{$out->id}}">
+                                <img class="card-image-hover w-100" src="{{ Voyager::image( str_replace('.png', '-thumbnail.png', $out->banner_image) ) }}" alt="{{$out->city}}-travel">
+                            </a>
+                        </div>
+                    </div>
+                @endforeach
+            </div>
+        @endif
     </div>
 
-    <div class="py-7">
+    <div class="py-5">
         <h3 class="h3 text-center">
             Great Trip, Start with a Comfort Car
         </h3>
@@ -67,8 +103,9 @@
         </p>
     </div>
 
-    <div class="card-item-slider py-7">
+    <div class="card-item-slider py-5">
         <h5 class="py-3">FAVORITE</h5>
+        @if ($favorites->count() >= 4)
         <div class="slick-slider">
             @foreach ($favorites as $favorite)
                 <div class="col-3 pl-0">
@@ -84,10 +121,28 @@
                 </div>
             @endforeach
         </div>
+        @else
+            <div class="row">
+                @foreach ($favorites as $favorite)
+                    <div class="col-3 pl-0">
+                        <div>
+                            <div class="position-absolute text-white card-caption">
+                                <h6 class="text-uppercase">{{$favorite->city}}</h6>
+                                <h6 class="text-uppercase text-small">{{$favorite->location}}</h6>
+                            </div>
+                            <a href="/city-travel/{{$favorite->id}}">
+                                <img class="card-image-hover w-100" src="{{ Voyager::image( str_replace('.png', '-thumbnail.png', $favorite->banner_image) ) }}" alt="{{$favorite->city}}-travel">
+                            </a>
+                        </div>
+                    </div>
+                @endforeach
+            </div>
+        @endif
     </div>
 
-    <div class="card-item-slider py-7">
+    <div class="card-item-slider py-5">
         <h5 class="py-3">RECOMENDED</h5>
+        @if ($recomends->count() >= 4)
         <div class="slick-slider">
             @foreach ($recomends as $recomend)
                 <div class="col-3 pl-0">
@@ -103,6 +158,23 @@
                 </div>
             @endforeach
         </div>
+        @else
+        <div class="row">
+            @foreach ($recomends as $recomend)
+                <div class="col-3 pl-0">
+                    <div>
+                        <div class="position-absolute text-white card-caption">
+                            <h6 class="text-uppercase">{{$recomend->city}}</h6>
+                            <h6 class="text-uppercase text-small">{{$recomend->location}}</h6>
+                        </div>
+                        <a href="/city-travel/{{$recomend->id}}">
+                            <img class="card-image-hover w-100" src="{{ Voyager::image( str_replace('.png', '-thumbnail.png', $recomend->banner_image) ) }}" alt="{{$recomend->city}}-travel">
+                        </a>
+                    </div>
+                </div>
+            @endforeach
+        </div>
+        @endif
     </div>
 @endsection
 

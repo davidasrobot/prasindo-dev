@@ -14,10 +14,10 @@
 @section('content')
     <div class="py-5">
         <h3 class="h3 text-center mb-5 text-capitalize">{{$golves->name}}</h3>
-        <img class="w-100 img-fluid" src="{{Voyager::image( $golves->banner_image )}}" alt="{{$golves->name}}">
+        <img class="w-100 img-fluid mh-400px" src="{{Voyager::image( $golves->banner_image )}}" alt="{{$golves->name}}">
     </div>
 
-    <div class="py-5">
+    {{-- <div class="py-5">
         <h4 class="h4 text-uppercase text-center mb-5">TRAVEL ITINERARY:</h4>
         <div class="col-10 mx-auto">
             <div class="row list">
@@ -31,7 +31,7 @@
                 @endforeach
             </div>
         </div>
-    </div>
+    </div> --}}
 
     <div class="py-5 pb-5 text-center">
         <h3 class="h3">Tour Destination</h3>
@@ -44,7 +44,7 @@
         $i = 1;
     @endphp
     @foreach ($golves->day as $d)
-        <div class="container-fluid py-7">
+        <div class="container-fluid py-5">
             <div class="row">
                 @if ($i % 2 == 0)
                     <div class="col-md-6 tour-slider pr-0 order-md-1">
@@ -75,7 +75,7 @@
 
     <div class="container">
 
-        <div class="py-10 golf-detail-include">
+        <div class="py-5 golf-detail-include">
             <div class="row">
                 <div class="col-md-5">
                     <div class="slick-slider">
@@ -101,7 +101,7 @@
             </div>
         </div>
 
-        <div class="py-7">
+        <div class="py-5">
             <h3 class="h3 text-center">Package Excludes</h3>
             <p class="w-75 mx-auto py-3 text-center">Ea voluptate pariatur sit laborum mollit veniam voluptate velit velit elit. Esse ut sit aute commodo voluptate. Duis qui deserunt sit est reprehenderit eu ut occaecat. Proident eiusmod cupidatat voluptate deserunt commodo ipsum cillum duis.</p>
             <div class="py-5 w-50 mx-auto">
@@ -129,7 +129,7 @@
         </div>
     </div>
 
-    <div class="py-7">
+    <div class="py-5">
         <h3 class="h3 text-center">Package Pricing</h3>
         <p class="w-75 mx-auto py-3 text-center">Price below are based on a minimum of 4-25 pax golfers traveling together</p>
     </div>
@@ -138,7 +138,7 @@
         $ii = 1;
     @endphp
     @foreach ($golves->Package as $p)
-        <div class="container-fluid py-10">
+        <div class="container-fluid py-5">
             <div class="row">
                 @if ($ii % 2 == 0)
                     <div class="col-6 tour-slider pr-0 order-last">
@@ -147,7 +147,7 @@
                 @endif
                     <img class="w-100" src="{{Voyager::image( $p->image )}}" alt="{{$p->name}}-travel-prasindo">
                 </div>
-                <div class="col-6 py-7 pr-0 pl-5">
+                <div class="col-6 py-5 pr-0 pl-5">
                     <div class="w-75 mx-auto">
                         <h4 class="h4">{{$p->name}}</h4>
                         <h6 class="text-small">{{$p->day}} Days {{$p->night}} Night</h6>
@@ -162,7 +162,7 @@
         @endphp
     @endforeach
 
-    <div class="container-fluid barlow py-10">
+    {{-- <div class="container-fluid barlow py-5">
         <div class="row">
             <div class="col-md-6">
                 <div class="w-md-75 mx-auto">
@@ -186,7 +186,7 @@
                                     {{$i}}/ {{$total}}
                                 </p>
                             </div>
-                            <img class="ml-auto" src="{{asset('images/interest.png')}}" alt="packet interest">
+                            <img class="ml-auto w-100" src="{{asset('images/interest.png')}}" alt="packet interest">
                         </div>
                     @endfor
                 </div>
@@ -203,15 +203,15 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
 
     <div class="py-10">
         <div class="text-center">
             <h3 class="h3">What Are You Waiting For?</h3>
             <p class="py-5">Let us to give you an amazing experience and journey, Click the button for book this package</p>
-            <button class="btn btn-primary px-5 text-uppercase font-weight-bold rounded-0">
+            <a href="/booking/golf" class="btn btn-primary px-5 text-uppercase font-weight-bold rounded-0">
                 book now
-            </button>
+            </a>
         </div>
     </div>
 @endsection

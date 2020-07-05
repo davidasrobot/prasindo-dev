@@ -9,22 +9,22 @@
         <div class="position-absolute text-header hero">
             <h1 class="h1">Amazing Bogor Raya
                 Golf Experience</h1>
-            <button class="btn btn-light rounded-0 text-uppercase font-weight-bold px-5">view more</button>
+            <a href="#destination" id="head-link" class="btn btn-light rounded-0 text-uppercase font-weight-bold px-5">view more</a>
         </div>
         <img class="img-fluid w-100" src="{{asset('images/home-hero.png')}}" alt="list-car-header" />
     </div>
 @endsection
 @section('content')
     <section id="destination">
-        <div class="py-10">
+        <div class="py-5">
             <h3 class="h3 text-center">Enjoy Every Moment</h3>
             <p class="text-center">
                 Don't miss every moment with us and enjoy a different sensation every time.
             </p>
         </div>
     
-        <div class="card-item-slider py-7">
-            <div class="slick-slider" id="other-car">
+        <div class="card-item-slider py-2">
+            <div class="slick-slider">
                 {{-- SLIDER MENU --}}
 
                 {{-- start --}}
@@ -102,28 +102,26 @@
         @php
             $i = 0
         @endphp
-        @foreach ($golves as $g)
-            @foreach ($g->package as $item)
-                <div class="row py-10">
-                    <div class="col-md-8">
-                        <img class="img-fluid" src="{{Voyager::image($item->image)}}" alt="package-2">
-                    </div>
-                    @if ($i % 2 == 0)
-                        <div class="col col-md-4 py-5 order-first">
-                    @else
-                        <div class="col col-md-4 py-5">
-                    @endif
-                        <h4 class="h4">{{$item->name}}</h4>
-                        <h6 class="text-small">{{$item->day}} Days {{$item->night}} Night</h6>
-                        <h5 class="h5 text-orange">IDR {{number_format($item->price, 2)}} / Person</h5>
-                        <p class="py-3">{{$item->description}}</p>
-                        <a href="/golf/{{$item->Golf->id}}" class="btn btn-outline-primary px-5 text-uppercase rounded-0 font-weight-bold">view more</a>
-                    </div>
+        @foreach ($golves as $item)
+            <div class="row py-7">
+                <div class="col-md-8">
+                    <img class="img-fluid" src="{{Voyager::image($item->image)}}" alt="package-{{$item->name}}">
                 </div>
-                @php
-                    $i++
-                @endphp
-            @endforeach
+                @if ($i % 2 == 0)
+                    <div class="col col-md-4 py-7 order-first">
+                @else
+                    <div class="col col-md-4 py-7">
+                @endif
+                    <h4 class="h4">{{$item->name}}</h4>
+                    <h6 class="text-small">{{$item->day}} Days {{$item->night}} Night</h6>
+                    <h5 class="h5 text-orange">IDR {{number_format($item->price, 2)}} / Person</h5>
+                    <p class="py-3">{{$item->description}}</p>
+                    <a href="/golf/{{$item->Golf->id}}" class="btn btn-outline-primary px-5 text-uppercase rounded-0 font-weight-bold">view more</a>
+                </div>
+            </div>
+            @php
+                $i++
+            @endphp
         @endforeach
         {{-- <div class="row py-10">
             <div class="col-md-4 py-5 order-1">
@@ -154,23 +152,22 @@
                 <div class="container">
                     <div class="card-item-slider">
                         <div class="slick-slider" id="other-car">
-                            @for ($i = 0; $i < 8; $i++)
+                            @foreach ($golf as $gf)
                                 <div class="col-4">
                                     <div>
-                                        <img class="card-image-hover rounded-0 w-100" src="https://picsum.photos/200/200" alt="lorem picture">
+                                        <img class="card-image-hover rounded-0 w-100" src="{{Voyager::image($gf->image)}}" alt="{{$gf->name}}">
                                         <div class="text-center py-4">
-                                            <h4>Package 3</h4>
+                                            <h4>{{$gf->name}}</h4>
                                             <h6 class="text-uppercase w-75 mx-auto">
-                                                5 Days 4 Night at Jakarta
-                                                and Bali, Exclusive Golf and Journey.
+                                                {{$gf->day}} day, {{$gf->night}} night at {{$gf->Golf->city}}
                                             </h6>
-                                            <a class="btn btn-outline-dark text-uppercase font-weight-bold rounded-0 px-5 mt-4" href="#">
+                                            <a class="btn btn-outline-dark text-uppercase font-weight-bold rounded-0 px-5 mt-4" href="/golf/{{$gf->id}}">
                                                 view more
                                             </a>
                                         </div>
                                     </div>
                                 </div>
-                            @endfor
+                            @endforeach
                         </div>
                     </div>
                 </div>
@@ -178,9 +175,9 @@
         </div>
     </section>
 
-    <section>
+    {{-- <section>
         <div class="container">
-            <div class="py-10">
+            <div class="py-5">
                 <div class="col col-lg-5 card-absolute-right order-last">
                     <div class="card card-body rounded-0 border-0">
                         <div>
@@ -194,10 +191,10 @@
                     </div>
                 </div>
                 <div class="col col-lg-9">
-                    <img class="img-fluid" src="{{asset('images/golf-tour-package.png')}}" alt="golf-tour-package">
+                    <img class="img-fluid w-100" src="{{asset('images/golf-tour-package.png')}}" alt="golf-tour-package">
                 </div>
             </div>
-            <div class="py-10">
+            <div class="py-5">
                 <div class="col col-lg-5 card-absolute-left order-last">
                     <div class="card card-body rounded-0 border-0">
                         <div>
@@ -211,11 +208,11 @@
                     </div>
                 </div>
                 <div class="col col-lg-9 ml-auto">
-                    <img class="img-fluid" src="{{asset('images/golf-tour-package.png')}}" alt="golf-tour-package">
+                    <img class="img-fluid w-100" src="{{asset('images/golf-tour-package.png')}}" alt="golf-tour-package">
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
 @endsection
 
 @section('javascript')
@@ -224,7 +221,7 @@
             dots: false,
             infinite: false,
             speed: 300,
-            slidesToShow: 3,
+            slidesToShow: 4,
             arrows:true,
             prevArrow: '<button class="btn prev rounded-circle"><i class="fa fa-chevron-left"></i></button>',
             nextArrow: '<button class="btn next rounded-circle"><i class="fa fa-chevron-right"></i></button>',
@@ -234,7 +231,7 @@
                 breakpoint: 1024,
                 settings: {
                     arrows:false,
-                    slidesToShow: 3,
+                    slidesToShow: 4,
                     slidesToScroll: 1,
                     infinite: true,
                     dots: false
@@ -263,5 +260,12 @@
                 // instead of a settings object
             ]
         });
+    $(document).ready(function(){
+        $("#head-link").click(function(){
+            $('html, body').animate({
+                scrollTop: $($(this).attr("href")).offset().top -70
+            }, 500);
+        })
+    })
     </script>
 @endsection

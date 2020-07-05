@@ -15,7 +15,7 @@
 @section('content')
     <div class="py-5">
         <h3 class="h3 text-center mb-5 text-capitalize">{{$travels->category}} City Tour</h3>
-        <img class="w-100 img-fluid" src="{{Voyager::image( $travels->banner_image )}}" alt="{{$travels->city}}-travel-prasindo">
+        <img class="w-100 img-fluid mh-400px" src="{{Voyager::image( $travels->banner_image )}}" alt="{{$travels->city}}-travel-prasindo">
     </div>
 
     <div class="py-5">
@@ -23,7 +23,7 @@
         <div class="col-10 mx-auto">
             <div class="row list">
                 @php
-                    $explode = explode('; ', $travels->itinerary)
+                    $explode = explode('; ', $travels->Packages()->first()->itinerary)
                 @endphp
                 @foreach ($explode as $e)
                     <div class="col-md-4">
@@ -45,7 +45,7 @@
     $i = 1;
 @endphp
     @foreach ($travels->day as $d)
-        <div class="container-fluid py-7">
+        <div class="container-fluid py-5">
             <div class="row">
                 @if ($i % 2 == 0)
                     <div class="col-md-6 tour-slider pr-0 order-md-1">
@@ -76,7 +76,7 @@
 
     <div class="container">
 
-        <div class="py-10">
+        <div class="py-5">
             <h3 class="h3 text-center">Tour Includes</h3>
             <div class="row tour-includes">
                 @foreach ($travels->include as $include)
@@ -91,7 +91,7 @@
             <p class="text-center">*Minimums 4 paxs Travel Together</p>
         </div>
 
-        <div class="py-7">
+        <div class="py-5">
             <h3 class="h3 text-center">Package Excludes</h3>
             <p class="w-75 mx-auto py-3">Ea voluptate pariatur sit laborum mollit veniam voluptate velit velit elit. Esse ut sit aute commodo voluptate. Duis qui deserunt sit est reprehenderit eu ut occaecat. Proident eiusmod cupidatat voluptate deserunt commodo ipsum cillum duis.</p>
             <div class="py-5 w-50 mx-auto">
@@ -119,7 +119,69 @@
         </div>
     </div>
 
-    <div class="container-fluid barlow py-10">
+    <div class="py-5">
+        <h3 class="h3 text-center">Package Pricing</h3>
+        <p class="w-75 mx-auto py-3">Ea voluptate pariatur sit laborum mollit veniam voluptate velit velit elit. Esse ut sit aute commodo voluptate. Duis qui deserunt sit est reprehenderit eu ut occaecat. Proident eiusmod cupidatat voluptate deserunt commodo ipsum cillum duis.</p>
+        <div class="py-5 w-75 mx-auto table-responsive">
+            <table class="table table-striped">
+                @foreach ($travels->Packages as $package)
+                    <thead>
+                        <tr>
+                            <th>Hotel</th>
+                            <th>{{$package->name_price_seven}} Person</th>
+                            <th>{{$package->name_price_six}} Person</th>
+                            <th>{{$package->name_price_five}} Person</th>
+                            <th>{{$package->name_price_four}} Person</th>
+                            <th>{{$package->name_price_three}} Person</th>
+                            <th>{{$package->name_price_two}} Person</th>
+                            <th>{{$package->name_price_one}} Person</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>{{$package->hotel->name}}</td>
+                            <td>
+                                {{(
+                                    substr($package->price_seven, 0,4) == "call"
+                                    ? "Call" :"Rp.".number_format($package->price_seven, 2))}}
+                            </td>
+                            <td>
+                                {{(
+                                    substr($package->price_six, 0,4) == "call"
+                                    ? "Call" :"Rp.".number_format($package->price_six, 2))}}
+                            </td>
+                            <td>
+                                {{(
+                                    substr($package->price_five, 0,4) == "call"
+                                    ? "Call" :"Rp.".number_format($package->price_five, 2))}}
+                            </td>
+                            <td>
+                                {{(
+                                    substr($package->price_four, 0,4) == "call"
+                                    ? "Call" :"Rp.".number_format($package->price_four, 2))}}
+                            </td>
+                            <td>
+                                {{(
+                                    substr($package->price_three, 0,4) == "call"
+                                    ? "Call" :"Rp.".number_format($package->price_three, 2))}}</td>
+                            <td>
+                                {{(
+                                    substr($package->price_two, 0,4) == "call"
+                                    ? "Call" :"Rp.".number_format($package->price_two, 2))}}    
+                            </td>
+                            <td>
+                                {{(
+                                    substr($package->price_one, 0,4) == "call"
+                                    ? "Call" :"Rp.".number_format($package->price_one, 2))}}    
+                            </td>
+                        </tr>
+                    </tbody>
+                @endforeach
+            </table>
+        </div>
+    </div>
+
+    {{-- <div class="container-fluid barlow py-5">
         <div class="row">
             <div class="col-md-6">
                 <div class="w-md-75 mx-auto">
@@ -143,7 +205,7 @@
                                     {{$i}}/ {{$total}}
                                 </p>
                             </div>
-                            <img class="ml-auto" src="{{asset('images/interest.png')}}" alt="packet interest">
+                            <img class="ml-auto w-100" src="{{asset('images/interest.png')}}" alt="packet interest">
                         </div>
                     @endfor
                 </div>
@@ -160,9 +222,9 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
 
-    <div class="py-10">
+    <div class="py-5">
         <div class="text-center">
             <h3 class="h3">What Are You Waiting For?</h3>
             <p class="py-5">Let us to give you an amazing experience and journey, Click the button for book this package</p>

@@ -14,7 +14,8 @@ class BookingCar extends Model
         'car_rent_id',
         'start_date',
         'end_date',
-        'days'
+        'days',
+        'notes'
     ];
 
     public function Booking()

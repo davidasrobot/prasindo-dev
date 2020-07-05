@@ -1,7 +1,7 @@
 @extends('app')
 
 @section('title')
-    Hotel
+    Hotel Recomendation
 @endsection
 
 @section('header')
@@ -11,14 +11,14 @@
     </div>
 @endsection
 @section('content')
-    <div class="py-7">
+    <div class="py-5">
         <h3 class="h3 text-center">We Recommend The Best Hotel</h3>
         <p class="text-center">
             Ea voluptate pariatur sit laborum mollit veniam voluptate velit velit elit. Esse ut sit aute commodo voluptate. Duis qui deserunt sit est reprehenderit eu ut occaecat. Proident eiusmod cupidatat voluptate deserunt commodo ipsum cillum duis.
         </p>
     </div>
 
-    <div class="card-item-slider py-7">
+    <div class="card-item-slider py-5">
         <h5 class="py-3 text-uppercase">NATIONAL</h5>
         <div class="slick-slider">
             @foreach ($nationals as $national)
@@ -37,7 +37,7 @@
         </div>
     </div>
 
-    <div class="card-item-slider py-7">
+    <div class="card-item-slider py-5">
         <h5 class="py-3 text-uppercase">INTERNATIONAL</h5>
         <div class="slick-slider">
             @foreach ($internationals as $inter)

@@ -25,9 +25,9 @@ $gotham: 'gotham-light', sans-serif;
 // $playfair: 'Playfair Display', serif;
 // $rubik: 'Rubik', sans-serif;
 // $source-sans-pro: 'Source Sans Pro', sans-serif;
-.bg-grey{
-    background-color: $grey;
-}
+// .bg-grey{
+//     background-color: $grey;
+// }
 h1,.h1{
     // font-family: $playfair;
     font-family: $gotham;
@@ -516,6 +516,12 @@ body{
             line-height: 30px !important;
         }
     }
+    @media screen and (max-width:320px) {
+        h1,.h1{
+            font-size: 20px !important;
+            line-height: 30px !important;
+        }
+    }
 }
 button {
     outline: none;
@@ -568,6 +574,9 @@ button {
     opacity: 0;
     visibility: hidden;
 }
+.brand{
+    width: 150px;
+}
 @media screen and (max-width:768px){
     #open-nav{
         display: block;
@@ -599,6 +608,12 @@ button {
         margin-left: 2rem;
         top: 6rem;
     }
+    @media screen and (max-width:320px) {
+        .text-header{
+            margin-left: 2rem;
+            top: 4rem;
+        }
+    }
     .card-absolute-right, .card-absolute-left{
         position: relative;
         right: 0;
@@ -609,8 +624,17 @@ button {
         font-size: 3.5rem;
     }
 }
+.whatsapp-fixed{
+    right: 1rem;
+    bottom: 3rem;
+    z-index: 9999 !important;
+}
 @media print {
     #print {
       display: none;
     }
   }
+
+.mh-400px{
+    max-height: 400px;
+}

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Travel;
+use App\TravelPackage;
 use Illuminate\Http\Request;
 
 class TravelController extends Controller
@@ -18,7 +19,7 @@ class TravelController extends Controller
         $outbounds = Travel::where('category', 'outbound')->get();
         $recomends = Travel::where('recomended', '1')->get();
         $favorites = Travel::where('favorite', '1')->get();
-        return view('CityTravel/index', compact([
+        return view('CityTravel.index', compact([
             'inbounds',
             'outbounds',
             'recomends',
@@ -55,8 +56,8 @@ class TravelController extends Controller
      */
     public function show($id)
     {
-        $travels = Travel::findOrFail($id);
-        return view('CityTravel/show', compact([
+        $travels = Travel::with('Packages')->findOrFail($id);
+        return view('CityTravel.show', compact([
             'travels'
         ]));
     }

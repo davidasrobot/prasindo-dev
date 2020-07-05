@@ -1,7 +1,7 @@
 @extends('app')
 
 @section('title')
-    list of cars
+    Car Rental
 @endsection
 
 @section('header')
@@ -12,15 +12,16 @@
     </div>
 @endsection
 @section('content')
-    <div class="py-7">
+    <div class="py-5">
         <h3 class="h3 text-center">Good Condition Car as Always</h3>
         <p class="text-center">
             Ea voluptate pariatur sit laborum mollit veniam voluptate velit velit elit. Esse ut sit aute commodo voluptate. Duis qui deserunt sit est reprehenderit eu ut occaecat. Proident eiusmod cupidatat voluptate deserunt commodo ipsum cillum duis.
         </p>
     </div>
 
-    <div class="card-item-slider py-7">
+    <div class="card-item-slider py-5">
         <h5 class="py-3">MINIBUS</h5>
+        @if ($minibuses->count() >= 4)
         <div class="slick-slider">
             @foreach ($minibuses as $minibus)
             <div class="col-3 pl-0">
@@ -36,10 +37,28 @@
             </div>
             @endforeach
         </div>
+        @else
+        <div class="row">
+            @foreach ($minibuses as $minibus)
+            <div class="col-3 pl-0">
+                <div>
+                    <div class="position-absolute text-white card-caption">
+                        <h6 class="text-uppercase">{{$minibus->name}}</h6>
+                        <h6 class="text-uppercase text-small">{{$minibus->merk}}</h6>
+                    </div>
+                    <a href="/car-rent/{{$minibus->id}}">
+                        <img class="card-image-hover w-100" src="{{ Voyager::image( str_replace('.png', '-thumbnail.png', $minibus->thumbnail->image) ) }}" alt="{{$minibus->thumbnail->name}}">
+                    </a>
+                </div>
+            </div>
+            @endforeach
+        </div>
+        @endif
     </div>
 
-    <div class="card-item-slider py-7">
+    <div class="card-item-slider py-5">
         <h5 class="py-3">MINIVAN</h5>
+        @if ($minivans->count() >= 4)
         <div class="slick-slider">
             @foreach ($minivans as $vans)
             <div class="col-3 pl-0">
@@ -55,9 +74,26 @@
             </div>
             @endforeach
         </div>
+        @else
+        <div class="row">
+            @foreach ($minivans as $vans)
+            <div class="col-3 pl-0">
+                <div>
+                    <div class="position-absolute text-white card-caption">
+                        <h6 class="text-uppercase">{{$vans->name}}</h6>
+                        <h6 class="text-uppercase text-small">{{$vans->merk}}</h6>
+                    </div>
+                    <a href="/car-rent/{{$vans->id}}">
+                        <img class="card-image-hover w-100" src="{{ Voyager::image( str_replace('.png', '-thumbnail.png', $vans->thumbnail->image) ) }}" alt="{{$vans->thumbnail->name}}">
+                    </a>
+                </div>
+            </div>
+            @endforeach
+        </div>
+        @endif
     </div>
 
-    <div class="py-7">
+    <div class="py-5">
         <h3 class="h3 text-center">
             Great Trip, Start with a Comfort Car
         </h3>
@@ -67,8 +103,9 @@
         </p>
     </div>
 
-    <div class="card-item-slider py-7">
+    <div class="card-item-slider py-5">
         <h5 class="py-3">LUXURY CAR</h5>
+        @if ($luxuries->count() >= 4)
         <div class="slick-slider">
             @foreach ($luxuries as $lux)
             <div class="col-3 pl-0">
@@ -84,10 +121,28 @@
             </div>
             @endforeach
         </div>
+        @else
+        <div class="row">
+            @foreach ($luxuries as $lux)
+            <div class="col-3 pl-0">
+                <div>
+                    <div class="position-absolute text-white card-caption">
+                        <h6 class="text-uppercase">{{$lux->name}}</h6>
+                        <h6 class="text-uppercase text-small">{{$lux->merk}}</h6>
+                    </div>
+                    <a href="/car-rent/{{$lux->id}}">
+                        <img class="card-image-hover w-100" src="{{ Voyager::image( str_replace('.png', '-thumbnail.png', $lux->thumbnail->image) ) }}" alt="{{$lux->thumbnail->name}}">
+                    </a>
+                </div>
+            </div>
+            @endforeach
+        </div>
+        @endif
     </div>
 
-    <div class="card-item-slider py-7">
+    <div class="card-item-slider py-5">
         <h5 class="py-3">BUS</h5>
+        @if ($buses->count() >= 4)
         <div class="slick-slider">
             @foreach ($buses as $bus)
             <div class="col-3 pl-0">
@@ -103,6 +158,23 @@
             </div>
             @endforeach
         </div>
+        @else
+        <div class="row">
+            @foreach ($buses as $bus)
+            <div class="col-3 pl-0">
+                <div>
+                    <div class="position-absolute text-white card-caption">
+                        <h6 class="text-uppercase">{{$bus->name}}</h6>
+                        <h6 class="text-uppercase text-small">{{$bus->merk}}</h6>
+                    </div>
+                    <a href="/car-rent/{{$bus->id}}">
+                        <img class="card-image-hover w-100" src="{{ Voyager::image( str_replace('.png', '-thumbnail.png', $bus->thumbnail->image) ) }}" alt="{{$bus->thumbnail->name}}">
+                    </a>
+                </div>
+            </div>
+            @endforeach
+        </div>
+        @endif
     </div>
 @endsection
 

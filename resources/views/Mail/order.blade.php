@@ -354,7 +354,7 @@
                         <h1><b>Rp. {{number_format($booking->total, 2)}}</b></h1>
                         <p style="text-align: center;">Payment can be made through BCA Bank A/n <b>Lorem NAme</b> with account number</p>
                         <h2 style="text-align: center; color: #3498db;">12345678</h2>
-                        <p>For more detail please click the button or visit: <a href="{{$link.$booking->id}}">{{$link.$booking->id}}</a></p>
+                        <p>For more detail please click the button or visit: <a href="{{$link.$booking->uuid}}">{{$link.$booking->uuid}}</a></p>
                         <table role="presentation" border="0" cellpadding="0" cellspacing="0" class="btn btn-primary">
                           <tbody>
                             <tr>
@@ -362,7 +362,7 @@
                                 <table role="presentation" border="0" cellpadding="0" cellspacing="0">
                                   <tbody>
                                     <tr>
-                                      <td> <a href="http://localhost:8000/booking/invoice/{{$booking->id}}" target="_blank">show invoice</a> </td>
+                                      <td> <a href="{{$link.$booking->uuid}}" target="_blank">show invoice</a> </td>
                                     </tr>
                                   </tbody>
                                 </table>

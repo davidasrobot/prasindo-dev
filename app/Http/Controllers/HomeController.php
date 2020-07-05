@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Golf;
+use App\GolfPackage;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -14,10 +15,11 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $golves = new Golf();
-        $golves = $golves->with(['Package'])->get();
+        $golf = GolfPackage::all();
+        $golves = $golf->random(3);
         return view('Home/index', compact([
-            'golves'
+            'golves',
+            'golf'
         ]));
     }
 

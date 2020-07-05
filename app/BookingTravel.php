@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class BookingTravel extends Model
 {
+    protected $table = 'booking_travels';
     protected $fillable = [
         'fullname',
         'phone',
@@ -15,7 +16,8 @@ class BookingTravel extends Model
         'travel_package_id',
         'start_date',
         'end_date',
-        'days'
+        'days',
+        'note'
     ];
 
     public function Booking()
